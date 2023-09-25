@@ -13,6 +13,7 @@
 		A71C41852AC1CDF600858592 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A71C41842AC1CDF600858592 /* Preview Assets.xcassets */; };
 		A71C41872AC1CDF600858592 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C41862AC1CDF600858592 /* Persistence.swift */; };
 		A71C418A2AC1CDF600858592 /* Luminary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A71C41882AC1CDF600858592 /* Luminary.xcdatamodeld */; };
+		A71C41912AC1E4BF00858592 /* AddQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C41902AC1E4BF00858592 /* AddQuoteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		A71C41842AC1CDF600858592 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A71C41862AC1CDF600858592 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		A71C41892AC1CDF600858592 /* Luminary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Luminary.xcdatamodel; sourceTree = "<group>"; };
+		A71C41902AC1E4BF00858592 /* AddQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuoteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				A71C41862AC1CDF600858592 /* Persistence.swift */,
 				A71C41882AC1CDF600858592 /* Luminary.xcdatamodeld */,
 				A71C41832AC1CDF600858592 /* Preview Content */,
+				A71C41902AC1E4BF00858592 /* AddQuoteView.swift */,
 			);
 			path = Luminary;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 				A71C41872AC1CDF600858592 /* Persistence.swift in Sources */,
 				A71C41802AC1CDF500858592 /* ContentView.swift in Sources */,
 				A71C418A2AC1CDF600858592 /* Luminary.xcdatamodeld in Sources */,
+				A71C41912AC1E4BF00858592 /* AddQuoteView.swift in Sources */,
 				A71C417E2AC1CDF500858592 /* LuminaryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
