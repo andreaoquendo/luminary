@@ -14,6 +14,9 @@
 		A71C41872AC1CDF600858592 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C41862AC1CDF600858592 /* Persistence.swift */; };
 		A71C418A2AC1CDF600858592 /* Luminary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A71C41882AC1CDF600858592 /* Luminary.xcdatamodeld */; };
 		A71C41912AC1E4BF00858592 /* AddQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C41902AC1E4BF00858592 /* AddQuoteView.swift */; };
+		A77511C32AC35AAF00547B2E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77511C22AC35AAF00547B2E /* Colors.swift */; };
+		A77511C52AC3615800547B2E /* DMSerifDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A77511C42AC3615800547B2E /* DMSerifDisplay-Regular.ttf */; };
+		A77511C82AC3633200547B2E /* Baskervville-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A77511C72AC3633200547B2E /* Baskervville-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,10 @@
 		A71C41862AC1CDF600858592 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		A71C41892AC1CDF600858592 /* Luminary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Luminary.xcdatamodel; sourceTree = "<group>"; };
 		A71C41902AC1E4BF00858592 /* AddQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuoteView.swift; sourceTree = "<group>"; };
+		A77511C22AC35AAF00547B2E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		A77511C42AC3615800547B2E /* DMSerifDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSerifDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		A77511C62AC3618A00547B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A77511C72AC3633200547B2E /* Baskervville-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baskervville-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,13 +64,17 @@
 		A71C417C2AC1CDF500858592 /* Luminary */ = {
 			isa = PBXGroup;
 			children = (
+				A77511C62AC3618A00547B2E /* Info.plist */,
 				A71C417D2AC1CDF500858592 /* LuminaryApp.swift */,
 				A71C417F2AC1CDF500858592 /* ContentView.swift */,
+				A77511C42AC3615800547B2E /* DMSerifDisplay-Regular.ttf */,
+				A77511C72AC3633200547B2E /* Baskervville-Regular.ttf */,
 				A71C41812AC1CDF600858592 /* Assets.xcassets */,
 				A71C41862AC1CDF600858592 /* Persistence.swift */,
 				A71C41882AC1CDF600858592 /* Luminary.xcdatamodeld */,
 				A71C41832AC1CDF600858592 /* Preview Content */,
 				A71C41902AC1E4BF00858592 /* AddQuoteView.swift */,
+				A77511C22AC35AAF00547B2E /* Colors.swift */,
 			);
 			path = Luminary;
 			sourceTree = "<group>";
@@ -135,7 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A71C41852AC1CDF600858592 /* Preview Assets.xcassets in Resources */,
+				A77511C82AC3633200547B2E /* Baskervville-Regular.ttf in Resources */,
 				A71C41822AC1CDF600858592 /* Assets.xcassets in Resources */,
+				A77511C52AC3615800547B2E /* DMSerifDisplay-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A71C41872AC1CDF600858592 /* Persistence.swift in Sources */,
+				A77511C32AC35AAF00547B2E /* Colors.swift in Sources */,
 				A71C41802AC1CDF500858592 /* ContentView.swift in Sources */,
 				A71C418A2AC1CDF600858592 /* Luminary.xcdatamodeld in Sources */,
 				A71C41912AC1E4BF00858592 /* AddQuoteView.swift in Sources */,
@@ -282,6 +296,7 @@
 				DEVELOPMENT_TEAM = U6ZXY7569L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Luminary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -292,7 +307,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.andreaoquendo.Luminary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreaoquendo.TheLuminary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -311,6 +326,7 @@
 				DEVELOPMENT_TEAM = U6ZXY7569L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Luminary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -321,7 +337,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.andreaoquendo.Luminary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreaoquendo.TheLuminary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
