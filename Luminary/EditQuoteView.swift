@@ -1,21 +1,16 @@
-//
-//  AddQuoteView.swift
-//  Luminary
-//
-//  Created by Andrea Oquendo on 25/09/23.
-//
-
 import SwiftUI
 
-struct AddQuoteView: View {
+struct EditQuoteView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    
     @Environment(\.presentationMode) var presentationMode
+    var editedQuote: Quote
     
     @State private var quote = ""
     @State private var date = Date()
     @State private var author = ""
     @State private var outro = ""
+    
+    @State private var firstAppear = true
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10){
@@ -24,7 +19,7 @@ struct AddQuoteView: View {
                 ZStack{
                     HStack(){
                         Spacer()
-                        Text("add quote")
+                        Text("edit quote")
                             .font(Font.custom("DMSerifDisplay-Regular", size: 24))
                         Spacer()
                     }
@@ -81,11 +76,23 @@ struct AddQuoteView: View {
             
             
             HStack{
+                Button(action: deleteQuote) {
+                    Text("Delete")
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 8)
+                        .font(Font.custom("Baskervville-Regular", size: 16))
+                        .background(.clear)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 4)
+                                .inset(by: 0.5)
+                                .stroke(Color.textLuminary, lineWidth: 1)
+                        )
+                }
                 
                 Spacer()
                 
-                Button(action: addQuote) {
-                    Text("Add Quote")
+                Button(action: saveQuote) {
+                    Text("Save Quote")
                         .padding(.horizontal, 16)
                         .padding(.vertical, 8)
                         .font(Font.custom("Baskervville-Regular", size: 16))
@@ -109,6 +116,38 @@ struct AddQuoteView: View {
         .background(Color.primaryLuminary)
         .foregroundColor(Color.textLuminary)
         .navigationBarBackButtonHidden(true)
+        .onAppear{
+            if firstAppear {
+                firstAppear = false
+                quote = editedQuote.quote ?? ""
+                date = editedQuote.date ?? Date()
+                author = editedQuote.author ?? ""
+                outro = editedQuote.outro ?? ""
+            }
+        }
+    }
+    
+    private func deleteQuote() {
+        viewContext.delete(editedQuote)
+        do {
+            try viewContext.save()
+        } catch {
+
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
+    
+    private func saveQuote() {
+        editedQuote.quote = quote
+        editedQuote.author = author
+        editedQuote.date = date
+        editedQuote.outro = outro
+
+        CoreData.shared.saveContext()
+        presentationMode.wrappedValue.dismiss()
+        
+  
     }
     
     private func Line () -> some View {
@@ -118,25 +157,11 @@ struct AddQuoteView: View {
             .background(.white)
     }
     
-    private func addQuote() {
-        let newQuote = Quote(context: CoreData.shared.persistentContainer.viewContext)
-        newQuote.quote = quote
-        newQuote.author = author
-        newQuote.date = date
-        newQuote.outro = outro
-        print(newQuote)
-
-        CoreData.shared.saveContext()
-        presentationMode.wrappedValue.dismiss()
-        
-  
-    }
-    
 }
 
 
-struct AddQuoteView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddQuoteView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
-}
+//struct EditQuoteView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EditQuoteView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+//    }
+//}

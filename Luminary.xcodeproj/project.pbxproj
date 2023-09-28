@@ -15,6 +15,9 @@
 		A70065D52AC4B9850010837F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C41862AC1CDF600858592 /* Persistence.swift */; };
 		A70065DE2AC4FE220010837F /* QuotesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70065DD2AC4FE220010837F /* QuotesHelper.swift */; };
 		A70065DF2AC4FE220010837F /* QuotesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70065DD2AC4FE220010837F /* QuotesHelper.swift */; };
+		A70065E12AC59EEA0010837F /* EditQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70065E02AC59EEA0010837F /* EditQuoteView.swift */; };
+		A70065E42AC5AA110010837F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77511C22AC35AAF00547B2E /* Colors.swift */; };
+		A70065E52AC5AA120010837F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77511C22AC35AAF00547B2E /* Colors.swift */; };
 		A703E3BA2AC3D7D000A26B31 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A703E3B92AC3D7D000A26B31 /* Intents.framework */; };
 		A703E3BD2AC3D7D000A26B31 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A703E3BC2AC3D7D000A26B31 /* IntentHandler.swift */; };
 		A703E3C52AC3D7D000A26B31 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A703E3C42AC3D7D000A26B31 /* IntentsUI.framework */; };
@@ -77,6 +80,7 @@
 		A70065C62AC4742E0010837F /* LuminaryIntentsUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LuminaryIntentsUI.entitlements; sourceTree = "<group>"; };
 		A70065CF2AC4757F0010837F /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		A70065DD2AC4FE220010837F /* QuotesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesHelper.swift; sourceTree = "<group>"; };
+		A70065E02AC59EEA0010837F /* EditQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuoteView.swift; sourceTree = "<group>"; };
 		A703E3B22AC3D70200A26B31 /* Luminary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Luminary.entitlements; sourceTree = "<group>"; };
 		A703E3B72AC3D7D000A26B31 /* LuminaryIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LuminaryIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A703E3B92AC3D7D000A26B31 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
@@ -202,6 +206,7 @@
 				A703E3E02AC4536300A26B31 /* AppIntent.swift */,
 				A70065CF2AC4757F0010837F /* CoreData.swift */,
 				A70065DD2AC4FE220010837F /* QuotesHelper.swift */,
+				A70065E02AC59EEA0010837F /* EditQuoteView.swift */,
 			);
 			path = Luminary;
 			sourceTree = "<group>";
@@ -346,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A70065E42AC5AA110010837F /* Colors.swift in Sources */,
 				A70065D52AC4B9850010837F /* Persistence.swift in Sources */,
 				A703E3DC2AC3D8AA00A26B31 /* Intents.intentdefinition in Sources */,
 				A703E3E22AC4536300A26B31 /* AppIntent.swift in Sources */,
@@ -362,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A70065D22AC475810010837F /* CoreData.swift in Sources */,
+				A70065E52AC5AA120010837F /* Colors.swift in Sources */,
 				A70065D42AC475AA0010837F /* Luminary.xcdatamodeld in Sources */,
 				A703E3C82AC3D7D000A26B31 /* IntentViewController.swift in Sources */,
 			);
@@ -380,6 +387,7 @@
 				A77511C32AC35AAF00547B2E /* Colors.swift in Sources */,
 				A71C41802AC1CDF500858592 /* ContentView.swift in Sources */,
 				A71C418A2AC1CDF600858592 /* Luminary.xcdatamodeld in Sources */,
+				A70065E12AC59EEA0010837F /* EditQuoteView.swift in Sources */,
 				A71C41912AC1E4BF00858592 /* AddQuoteView.swift in Sources */,
 				A71C417E2AC1CDF500858592 /* LuminaryApp.swift in Sources */,
 			);

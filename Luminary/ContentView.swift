@@ -77,9 +77,10 @@ struct DropCapTextView: View {
         }
         
         
-        return text
+        return String(text.dropFirst())
         
     }
+    
     
     private func textWithoutCaps() -> String{
         if text.count > aux {
@@ -138,9 +139,9 @@ struct ContentView: View {
                     
                     
                     VStack(spacing: 16){
-                        DropCapTextView(text: "Growing old and dying is what gives meaning and beauty to the fleeting span of a human life. It’s precisely because we age and die that our lives have value and nobility.")
+                        DropCapTextView(text: getRandomQuoteForToday()?.quote ?? "")
                         
-                        Text("— Kyojuro Rengoku (Demon Slayer)")
+                        Text("— \(getRandomQuoteForToday()?.author ?? "") (\(getRandomQuoteForToday()?.outro ?? ""))")
                             .font(Font.custom("Baskervville-Regular", size: 16))
                             .frame(maxWidth: .infinity, alignment: .trailing)
                         
@@ -175,7 +176,8 @@ struct ContentView: View {
                             ForEach(quotes) { quote in
                                 
                                 NavigationLink {
-                                    Text(quote.quote ?? "placeholder")
+                                    EditQuoteView(editedQuote: quote)
+
                                 } label: {
                                     QuoteItem(
                                         quote: quote.quote,
@@ -207,6 +209,22 @@ struct ContentView: View {
                 AppIntent.allowSiri()
                 AppIntent.quoteSiri()
             }
+            
+            
+            var isFirstLaunch: Bool = !UserDefaults.standard.bool(forKey: "isFirstLaunch")
+            
+            if isFirstLaunch {
+                print("hey")
+                addPreviewQuote(quote: "Growing old and dying is what gives meaning and beauty to the fleeting span of life. It's precisely because we age and die that our lives have value and nobility.", author: "Rengoku", outro: "Demon Slayer")
+                addPreviewQuote(quote: "A sound soul dwells within a sound mind & a sound body.", author: "Maka", outro: "Soul Eater")
+                addPreviewQuote(quote: "You should use your strength to help others.", author: "Itadori's Grandfather", outro: "Jujutsu Kaisen")
+                addPreviewQuote(quote: "It’s not about whether I can, I have to do it.", author: "Megumi Fushiguro", outro: "Jujutsu Kaisen")
+                addPreviewQuote(quote: "Dedication is a talent all on its own.", author: "Alphonse", outro: "Fullmetal Alchemist Brotherhood")
+                
+            } else {
+                print("ho")
+            }
+            
         }
         .onChange(of: scenePhase) { newPhase in
             
@@ -222,6 +240,70 @@ struct ContentView: View {
             
         }
 
+    }
+    
+    func storeRandomIndex(_ index: Int, forDate date: Date) {
+        UserDefaults.standard.set(index, forKey: "RandomIndex")
+        UserDefaults.standard.set(date, forKey: "RandomIndexDate")
+    }
+
+    func getRandomIndex() -> Int? {
+        return UserDefaults.standard.integer(forKey: "RandomIndex")
+    }
+
+    func getRandomIndexDate() -> Date? {
+        return UserDefaults.standard.object(forKey: "RandomIndexDate") as? Date
+    }
+    
+    func generateNewRandomIndex() -> Int {
+        if quotes.count == 0 {
+            return -1
+        }
+        
+        let randomIndex = Int.random(in: 0..<quotes.count) // Adjust this range accordingly
+        storeRandomIndex(randomIndex, forDate: Date())
+        return randomIndex
+    }
+    
+    func getRandomQuoteForToday() -> Quote? {
+        if isNewDay() {
+            let randomIndex = generateNewRandomIndex()
+            // Use this randomIndex to fetch the quote
+            if randomIndex == -1 {
+                return nil
+            }
+            return quotes[quotes.count - randomIndex - 1]
+        }
+        
+        if getRandomIndex() == nil {
+            return nil
+        }
+        let val = quotes.count - (getRandomIndex() ?? 0) - 1
+        
+        return quotes[val]
+        // Fetch and return the quote based on the stored or generated randomIndex
+    }
+    
+    func isNewDay() -> Bool {
+        if let storedDate = getRandomIndexDate() {
+            let currentDate = Date()
+            let calendar = Calendar.current
+            return !calendar.isDate(storedDate, inSameDayAs: currentDate)
+        }
+        return true
+    }
+
+    
+    private func addPreviewQuote(quote: String, author: String, outro: String) {
+        let newQuote = Quote(context: CoreData.shared.persistentContainer.viewContext)
+        newQuote.quote = quote
+        newQuote.author = author
+        newQuote.date = Date()
+        newQuote.outro = outro
+
+        CoreData.shared.saveContext()
+        
+  
     }
     
     private func addQuote(quote: String, date: Date) {
@@ -247,14 +329,16 @@ struct ContentView: View {
         VStack(alignment: .leading, spacing: 10) {
             
             Text(quote ?? "")
+                .font(Font.custom("Baskervville-Regular", size: 16))
             
             if outro?.count ?? 0 > 0 {
                 Text("— \(author ?? "Unknown") (\(outro ?? ""))")
+                    .font(Font.custom("Baskervville-Regular", size: 12))
             } else {
                 Text("— \(author ?? "Unknown")")
+                    .font(Font.custom("Baskervville-Regular", size: 12))
             }
         }
-        .font(Font.custom("Baskervville-Regular", size: 16))
         .padding(16)
         .multilineTextAlignment(.leading)
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -265,20 +349,23 @@ struct ContentView: View {
         
     }
     
-//    private func deleteItems(offsets: IndexSet) {
-//        withAnimation {
-//            offsets.map { quotes[$0] }.forEach(viewContext.delete)
-//
-//            do {
-//                try viewContext.save()
-//            } catch {
-//                // Replace this implementation with code to handle the error appropriately.
-//                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-//                let nsError = error as NSError
-//                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-//            }
-//        }
-//    }
+    
+    
+    private func deleteItems(offsets: IndexSet) {
+        withAnimation {
+            offsets.map { quotes[$0] }.forEach(viewContext.delete)
+
+            do {
+                try viewContext.save()
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+        }
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

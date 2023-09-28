@@ -12,10 +12,23 @@ struct LuminaryApp: App {
 
     let coreDataController = CoreData.shared
     
+
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, coreDataController.persistentContainer.viewContext)
+                .onAppear {
+                    // Check if the app has been launched before
+                    let isFirstLaunch = UserDefaults.standard.bool(forKey: "isFirstLaunch")
+                    
+                    if isFirstLaunch {
+                        print("nao eh")
+                    } else {
+                        
+                        UserDefaults.standard.set(true, forKey: "isFirstLaunch")
+                    }
+                }
         }
     }
 }
