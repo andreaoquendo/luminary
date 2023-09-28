@@ -71,13 +71,13 @@ struct DropCapTextView: View {
                     }
                 }
                 
-                return String(text.dropFirst().prefix(idx))
+                return String(text.dropFirst().prefix(idx).trimmingCharacters(in: .whitespacesAndNewlines))
               
             }
         }
         
         
-        return String(text.dropFirst())
+        return String(text.dropFirst().trimmingCharacters(in: .whitespacesAndNewlines))
         
     }
     
