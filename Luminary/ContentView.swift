@@ -7,10 +7,12 @@
 
 import SwiftUI
 import CoreData
+import Combine
+
 
 struct DropCapTextView: View {
     let text: String
-    var aux: Int = 70
+    @State var aux: Int = 70
 
     var body: some View {
         VStack(alignment: .leading, spacing: -4) {
@@ -18,8 +20,30 @@ struct DropCapTextView: View {
                 Text(text.prefix(1))
                     .font(Font.custom("DMSerifDisplay-Regular", size: 64))
                     .frame(width:42, height: 70)
-                Text(textWithCaps())
-                    .fixedSize(horizontal: false, vertical: true)
+                GeometryReader { geometry in
+                    HStack(alignment: .center){
+                        Text(textWithCaps())
+                            .multilineTextAlignment(.leading)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .background(
+                                Color.clear.onAppear {
+                                    // Calculate the number of characters that fit on one line
+                                    let maxWidth = geometry.size.width
+                                    let font = UIFont(name: "Baskervville-Regular", size: 22) // Change to your desired font
+                                    
+                                    // Calculate the approximate number of characters that fit in one line
+                                    let approximateCharactersPerLine = Int(maxWidth / (font?.pointSize ?? 1))
+                                    aux = approximateCharactersPerLine * 5 - 8
+                                    
+                                    print("Approximate characters per line: \(approximateCharactersPerLine)")
+                                }
+                            )
+                    }
+                    .frame(maxHeight: .infinity)
+                    .padding(0)
+                        
+                }
+                .frame(height:70)
             }
             Text(textWithoutCaps())
                 .multilineTextAlignment(.leading)
@@ -41,7 +65,6 @@ struct DropCapTextView: View {
                 var idx = aux
                 
                 for (index, item) in a.enumerated() {
-                    print(item)
                     if item == " " {
                         idx = aux - index
                         break
@@ -69,7 +92,6 @@ struct DropCapTextView: View {
                 var idx = aux
                 
                 for (index, item) in a.enumerated() {
-                    print(item)
                     if item == " " {
                         idx = aux - index
                         break
@@ -87,13 +109,20 @@ struct DropCapTextView: View {
 
 }
 
+
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.managedObjectContext) var viewContext
+    @Environment(\.scenePhase) var scenePhase
+    
     
     @FetchRequest(sortDescriptors: [
         NSSortDescriptor(keyPath: \Quote.date, ascending: false)],
         animation: .default)
     var quotes: FetchedResults<Quote>
+    
+    @State private var viewDidLoad = false
+    
+
     
 
     var body: some View {
@@ -171,7 +200,40 @@ struct ContentView: View {
             
         }
         .background(Color.primaryLuminary)
+        .onAppear {
         
+            if viewDidLoad == false {
+                viewDidLoad = true
+                AppIntent.allowSiri()
+                AppIntent.quoteSiri()
+            }
+        }
+        .onChange(of: scenePhase) { newPhase in
+            
+            if newPhase == .active {
+                if !QuotesHelper.getQuotes().isEmpty {
+                    for quote in QuotesHelper.getQuotes() {
+                        addQuote(quote: quote.quote, date: quote.date)
+                    }
+                    QuotesHelper.reset()
+                }
+                
+            }
+            
+        }
+
+    }
+    
+    private func addQuote(quote: String, date: Date) {
+        let newQuote = Quote(context: CoreData.shared.persistentContainer.viewContext)
+        newQuote.quote = quote
+        newQuote.author = "Unknown"
+        newQuote.date = date
+        newQuote.outro = ""
+
+        CoreData.shared.saveContext()
+        
+  
     }
 
     private func Line () -> some View {
@@ -203,24 +265,25 @@ struct ContentView: View {
         
     }
     
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { quotes[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
+//    private func deleteItems(offsets: IndexSet) {
+//        withAnimation {
+//            offsets.map { quotes[$0] }.forEach(viewContext.delete)
+//
+//            do {
+//                try viewContext.save()
+//            } catch {
+//                // Replace this implementation with code to handle the error appropriately.
+//                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+//                let nsError = error as NSError
+//                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+//            }
+//        }
+//    }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView()
+//            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

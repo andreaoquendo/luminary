@@ -9,12 +9,13 @@ import SwiftUI
 
 @main
 struct LuminaryApp: App {
-    let persistenceController = PersistenceController.shared
 
+    let coreDataController = CoreData.shared
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environment(\.managedObjectContext, coreDataController.persistentContainer.viewContext)
         }
     }
 }
