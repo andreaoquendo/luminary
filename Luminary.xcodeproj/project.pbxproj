@@ -44,6 +44,7 @@
 		A71098EA2AC7060400E0E517 /* QuotesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70065DD2AC4FE220010837F /* QuotesHelper.swift */; };
 		A71098EB2AC7061400E0E517 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77511C22AC35AAF00547B2E /* Colors.swift */; };
 		A71098EC2AC7082A00E0E517 /* Baskervville-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A77511C72AC3633200547B2E /* Baskervville-Regular.ttf */; };
+		A71098EE2AC70AAF00E0E517 /* QuoteIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71098ED2AC70AAF00E0E517 /* QuoteIntent.swift */; };
 		A71C417E2AC1CDF500858592 /* LuminaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C417D2AC1CDF500858592 /* LuminaryApp.swift */; };
 		A71C41802AC1CDF500858592 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C417F2AC1CDF500858592 /* ContentView.swift */; };
 		A71C41822AC1CDF600858592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A71C41812AC1CDF600858592 /* Assets.xcassets */; };
@@ -124,7 +125,8 @@
 		A71098DC2AC7056D00E0E517 /* LuminaryWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = LuminaryWidget.intentdefinition; sourceTree = "<group>"; };
 		A71098DD2AC7056E00E0E517 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A71098DF2AC7056E00E0E517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A71098E82AC7059000E0E517 /* LuminaryWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LuminaryWidgetExtension.entitlements; sourceTree = "<group>"; };
+		A71098E82AC7059000E0E517 /* LuminaryWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LuminaryWidgetExtension.entitlements; sourceTree = SOURCE_ROOT; };
+		A71098ED2AC70AAF00E0E517 /* QuoteIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuoteIntent.swift; path = Luminary/QuoteIntent.swift; sourceTree = "<group>"; };
 		A71C417A2AC1CDF500858592 /* Luminary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Luminary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A71C417D2AC1CDF500858592 /* LuminaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuminaryApp.swift; sourceTree = "<group>"; };
 		A71C417F2AC1CDF500858592 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 		A71C41712AC1CDF500858592 = {
 			isa = PBXGroup;
 			children = (
+				A71098ED2AC70AAF00E0E517 /* QuoteIntent.swift */,
 				A71098E82AC7059000E0E517 /* LuminaryWidgetExtension.entitlements */,
 				A71C417C2AC1CDF500858592 /* Luminary */,
 				A703E3BB2AC3D7D000A26B31 /* LuminaryIntents */,
@@ -485,6 +488,7 @@
 				A703E3DE2AC4518C00A26B31 /* QuoteIntentHandler.swift in Sources */,
 				A703E3E12AC4536300A26B31 /* AppIntent.swift in Sources */,
 				A70065DE2AC4FE220010837F /* QuotesHelper.swift in Sources */,
+				A71098EE2AC70AAF00E0E517 /* QuoteIntent.swift in Sources */,
 				A71C41872AC1CDF600858592 /* Persistence.swift in Sources */,
 				A70065D02AC4757F0010837F /* CoreData.swift in Sources */,
 				A71098E12AC7056E00E0E517 /* LuminaryWidget.intentdefinition in Sources */,

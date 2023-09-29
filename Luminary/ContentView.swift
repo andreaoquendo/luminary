@@ -206,8 +206,8 @@ struct ContentView: View {
         
             if viewDidLoad == false {
                 viewDidLoad = true
-                AppIntent.allowSiri()
-                AppIntent.quoteSiri()
+                AppIntentLuminary.allowSiri()
+                AppIntentLuminary.quoteSiri()
             }
             
             

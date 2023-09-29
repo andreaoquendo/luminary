@@ -8,7 +8,7 @@
 import Foundation
 import Intents
 
-class AppIntent {
+class AppIntentLuminary {
     
     class func allowSiri() {
         INPreferences.requestSiriAuthorization{ status in
