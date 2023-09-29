@@ -1,8 +1,7 @@
-//
-//  Colors.swift
-//  LuminaryWidgetExtension
-//
-//  Created by Andrea Oquendo on 28/09/23.
-//
+import SwiftUI
 
-import Foundation
+extension Color {
+    static let primaryLuminary = Color("primaryLuminary")
+    static let textLuminary = Color("textLuminary")
+    static let fadedLuminary = Color("fadedLuminary")
+}

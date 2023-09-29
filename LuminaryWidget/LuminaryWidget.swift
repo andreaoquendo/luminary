@@ -44,8 +44,22 @@ struct LuminaryWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+        VStack(alignment: .center){
+            Spacer()
+            Text(QuotesHelper.getRandomQuote()?.quote ?? "Loading")
+                .multilineTextAlignment(.center)
+                .font(Font.custom("Baskervville-Regular", size: 16))
+            
+            Spacer()
+        }
+        .padding(.horizontal, 8)
+        .frame(maxWidth: .infinity)
+        .background(Color.primaryLuminary)
+        
+        
     }
+    
+    
 }
 
 struct LuminaryWidget: Widget {
