@@ -119,7 +119,7 @@ struct AddQuoteView: View {
     }
     
     private func addQuote() {
-        let newQuote = Quote(context: CoreData.shared.persistentContainer.viewContext)
+    let newQuote = Quote(context: CoreData.shared.persistentContainer.viewContext)
         newQuote.quote = quote
         newQuote.author = author
         newQuote.date = date
