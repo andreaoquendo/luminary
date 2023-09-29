@@ -2,7 +2,7 @@
 //  LuminaryWidget.swift
 //  LuminaryWidget
 //
-//  Created by Andrea Oquendo on 28/09/23.
+//  Created by Andrea Oquendo on 29/09/23.
 //
 
 import WidgetKit
@@ -55,11 +55,7 @@ struct LuminaryWidgetEntryView : View {
         .padding(.horizontal, 8)
         .frame(maxWidth: .infinity)
         .background(Color.primaryLuminary)
-        
-        
     }
-    
-    
 }
 
 struct LuminaryWidget: Widget {

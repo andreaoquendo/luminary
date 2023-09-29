@@ -31,6 +31,19 @@
 		A703E3DF2AC4518C00A26B31 /* QuoteIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A703E3DD2AC4518C00A26B31 /* QuoteIntentHandler.swift */; };
 		A703E3E12AC4536300A26B31 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A703E3E02AC4536300A26B31 /* AppIntent.swift */; };
 		A703E3E22AC4536300A26B31 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A703E3E02AC4536300A26B31 /* AppIntent.swift */; };
+		A71098D22AC7056D00E0E517 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71098D12AC7056D00E0E517 /* WidgetKit.framework */; };
+		A71098D42AC7056D00E0E517 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71098D32AC7056D00E0E517 /* SwiftUI.framework */; };
+		A71098D72AC7056D00E0E517 /* LuminaryWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71098D62AC7056D00E0E517 /* LuminaryWidgetBundle.swift */; };
+		A71098D92AC7056D00E0E517 /* LuminaryWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71098D82AC7056D00E0E517 /* LuminaryWidgetLiveActivity.swift */; };
+		A71098DB2AC7056D00E0E517 /* LuminaryWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71098DA2AC7056D00E0E517 /* LuminaryWidget.swift */; };
+		A71098DE2AC7056E00E0E517 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A71098DD2AC7056E00E0E517 /* Assets.xcassets */; };
+		A71098E02AC7056E00E0E517 /* LuminaryWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = A71098DC2AC7056D00E0E517 /* LuminaryWidget.intentdefinition */; };
+		A71098E12AC7056E00E0E517 /* LuminaryWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = A71098DC2AC7056D00E0E517 /* LuminaryWidget.intentdefinition */; };
+		A71098E42AC7056E00E0E517 /* LuminaryWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A71098D02AC7056D00E0E517 /* LuminaryWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A71098E92AC705F400E0E517 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A71C41812AC1CDF600858592 /* Assets.xcassets */; };
+		A71098EA2AC7060400E0E517 /* QuotesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70065DD2AC4FE220010837F /* QuotesHelper.swift */; };
+		A71098EB2AC7061400E0E517 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77511C22AC35AAF00547B2E /* Colors.swift */; };
+		A71098EC2AC7082A00E0E517 /* Baskervville-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A77511C72AC3633200547B2E /* Baskervville-Regular.ttf */; };
 		A71C417E2AC1CDF500858592 /* LuminaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C417D2AC1CDF500858592 /* LuminaryApp.swift */; };
 		A71C41802AC1CDF500858592 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C417F2AC1CDF500858592 /* ContentView.swift */; };
 		A71C41822AC1CDF600858592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A71C41812AC1CDF600858592 /* Assets.xcassets */; };
@@ -58,6 +71,13 @@
 			remoteGlobalIDString = A703E3B62AC3D7D000A26B31;
 			remoteInfo = LuminaryIntents;
 		};
+		A71098E22AC7056E00E0E517 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A71C41722AC1CDF500858592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A71098CF2AC7056D00E0E517;
+			remoteInfo = LuminaryWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,6 +88,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				A703E3CF2AC3D7D000A26B31 /* LuminaryIntentsUI.appex in Embed Foundation Extensions */,
+				A71098E42AC7056E00E0E517 /* LuminaryWidgetExtension.appex in Embed Foundation Extensions */,
 				A703E3D22AC3D7D000A26B31 /* LuminaryIntents.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -94,6 +115,16 @@
 		A703E3DA2AC3D8AA00A26B31 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		A703E3DD2AC4518C00A26B31 /* QuoteIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteIntentHandler.swift; sourceTree = "<group>"; };
 		A703E3E02AC4536300A26B31 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		A71098D02AC7056D00E0E517 /* LuminaryWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LuminaryWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A71098D12AC7056D00E0E517 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		A71098D32AC7056D00E0E517 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		A71098D62AC7056D00E0E517 /* LuminaryWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuminaryWidgetBundle.swift; sourceTree = "<group>"; };
+		A71098D82AC7056D00E0E517 /* LuminaryWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuminaryWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		A71098DA2AC7056D00E0E517 /* LuminaryWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuminaryWidget.swift; sourceTree = "<group>"; };
+		A71098DC2AC7056D00E0E517 /* LuminaryWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = LuminaryWidget.intentdefinition; sourceTree = "<group>"; };
+		A71098DD2AC7056E00E0E517 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A71098DF2AC7056E00E0E517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A71098E82AC7059000E0E517 /* LuminaryWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LuminaryWidgetExtension.entitlements; sourceTree = "<group>"; };
 		A71C417A2AC1CDF500858592 /* Luminary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Luminary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A71C417D2AC1CDF500858592 /* LuminaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuminaryApp.swift; sourceTree = "<group>"; };
 		A71C417F2AC1CDF500858592 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -125,6 +156,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A71098CD2AC7056D00E0E517 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A71098D42AC7056D00E0E517 /* SwiftUI.framework in Frameworks */,
+				A71098D22AC7056D00E0E517 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A71C41772AC1CDF500858592 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -140,6 +180,8 @@
 			children = (
 				A703E3B92AC3D7D000A26B31 /* Intents.framework */,
 				A703E3C42AC3D7D000A26B31 /* IntentsUI.framework */,
+				A71098D12AC7056D00E0E517 /* WidgetKit.framework */,
+				A71098D32AC7056D00E0E517 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -167,12 +209,27 @@
 			path = LuminaryIntentsUI;
 			sourceTree = "<group>";
 		};
+		A71098D52AC7056D00E0E517 /* LuminaryWidget */ = {
+			isa = PBXGroup;
+			children = (
+				A71098D62AC7056D00E0E517 /* LuminaryWidgetBundle.swift */,
+				A71098D82AC7056D00E0E517 /* LuminaryWidgetLiveActivity.swift */,
+				A71098DA2AC7056D00E0E517 /* LuminaryWidget.swift */,
+				A71098DC2AC7056D00E0E517 /* LuminaryWidget.intentdefinition */,
+				A71098DD2AC7056E00E0E517 /* Assets.xcassets */,
+				A71098DF2AC7056E00E0E517 /* Info.plist */,
+			);
+			path = LuminaryWidget;
+			sourceTree = "<group>";
+		};
 		A71C41712AC1CDF500858592 = {
 			isa = PBXGroup;
 			children = (
+				A71098E82AC7059000E0E517 /* LuminaryWidgetExtension.entitlements */,
 				A71C417C2AC1CDF500858592 /* Luminary */,
 				A703E3BB2AC3D7D000A26B31 /* LuminaryIntents */,
 				A703E3C62AC3D7D000A26B31 /* LuminaryIntentsUI */,
+				A71098D52AC7056D00E0E517 /* LuminaryWidget */,
 				A703E3B82AC3D7D000A26B31 /* Frameworks */,
 				A71C417B2AC1CDF500858592 /* Products */,
 			);
@@ -184,6 +241,7 @@
 				A71C417A2AC1CDF500858592 /* Luminary.app */,
 				A703E3B72AC3D7D000A26B31 /* LuminaryIntents.appex */,
 				A703E3C32AC3D7D000A26B31 /* LuminaryIntentsUI.appex */,
+				A71098D02AC7056D00E0E517 /* LuminaryWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -256,6 +314,23 @@
 			productReference = A703E3C32AC3D7D000A26B31 /* LuminaryIntentsUI.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		A71098CF2AC7056D00E0E517 /* LuminaryWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A71098E72AC7056E00E0E517 /* Build configuration list for PBXNativeTarget "LuminaryWidgetExtension" */;
+			buildPhases = (
+				A71098CC2AC7056D00E0E517 /* Sources */,
+				A71098CD2AC7056D00E0E517 /* Frameworks */,
+				A71098CE2AC7056D00E0E517 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LuminaryWidgetExtension;
+			productName = LuminaryWidgetExtension;
+			productReference = A71098D02AC7056D00E0E517 /* LuminaryWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		A71C41792AC1CDF500858592 /* Luminary */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A71C418D2AC1CDF600858592 /* Build configuration list for PBXNativeTarget "Luminary" */;
@@ -270,6 +345,7 @@
 			dependencies = (
 				A703E3CE2AC3D7D000A26B31 /* PBXTargetDependency */,
 				A703E3D12AC3D7D000A26B31 /* PBXTargetDependency */,
+				A71098E32AC7056E00E0E517 /* PBXTargetDependency */,
 			);
 			name = Luminary;
 			productName = Luminary;
@@ -290,6 +366,9 @@
 						CreatedOnToolsVersion = 14.3;
 					};
 					A703E3C22AC3D7D000A26B31 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					A71098CF2AC7056D00E0E517 = {
 						CreatedOnToolsVersion = 14.3;
 					};
 					A71C41792AC1CDF500858592 = {
@@ -313,6 +392,7 @@
 				A71C41792AC1CDF500858592 /* Luminary */,
 				A703E3B62AC3D7D000A26B31 /* LuminaryIntents */,
 				A703E3C22AC3D7D000A26B31 /* LuminaryIntentsUI */,
+				A71098CF2AC7056D00E0E517 /* LuminaryWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -330,6 +410,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A703E3CB2AC3D7D000A26B31 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A71098CE2AC7056D00E0E517 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A71098E92AC705F400E0E517 /* Assets.xcassets in Resources */,
+				A71098DE2AC7056E00E0E517 /* Assets.xcassets in Resources */,
+				A71098EC2AC7082A00E0E517 /* Baskervville-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +464,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A71098CC2AC7056D00E0E517 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A71098DB2AC7056D00E0E517 /* LuminaryWidget.swift in Sources */,
+				A71098EB2AC7061400E0E517 /* Colors.swift in Sources */,
+				A71098E02AC7056E00E0E517 /* LuminaryWidget.intentdefinition in Sources */,
+				A71098D92AC7056D00E0E517 /* LuminaryWidgetLiveActivity.swift in Sources */,
+				A71098EA2AC7060400E0E517 /* QuotesHelper.swift in Sources */,
+				A71098D72AC7056D00E0E517 /* LuminaryWidgetBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A71C41762AC1CDF500858592 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -384,6 +487,7 @@
 				A70065DE2AC4FE220010837F /* QuotesHelper.swift in Sources */,
 				A71C41872AC1CDF600858592 /* Persistence.swift in Sources */,
 				A70065D02AC4757F0010837F /* CoreData.swift in Sources */,
+				A71098E12AC7056E00E0E517 /* LuminaryWidget.intentdefinition in Sources */,
 				A77511C32AC35AAF00547B2E /* Colors.swift in Sources */,
 				A71C41802AC1CDF500858592 /* ContentView.swift in Sources */,
 				A71C418A2AC1CDF600858592 /* Luminary.xcdatamodeld in Sources */,
@@ -405,6 +509,11 @@
 			isa = PBXTargetDependency;
 			target = A703E3B62AC3D7D000A26B31 /* LuminaryIntents */;
 			targetProxy = A703E3D02AC3D7D000A26B31 /* PBXContainerItemProxy */;
+		};
+		A71098E32AC7056E00E0E517 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A71098CF2AC7056D00E0E517 /* LuminaryWidgetExtension */;
+			targetProxy = A71098E22AC7056E00E0E517 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -516,6 +625,62 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andreaoquendo.TheLuminary.LuminaryIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A71098E52AC7056E00E0E517 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = LuminaryWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U6ZXY7569L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LuminaryWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LuminaryWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreaoquendo.TheLuminary.LuminaryWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A71098E62AC7056E00E0E517 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = LuminaryWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U6ZXY7569L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LuminaryWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LuminaryWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreaoquendo.TheLuminary.LuminaryWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -721,6 +886,15 @@
 			buildConfigurations = (
 				A703E3D72AC3D7D000A26B31 /* Debug */,
 				A703E3D82AC3D7D000A26B31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A71098E72AC7056E00E0E517 /* Build configuration list for PBXNativeTarget "LuminaryWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A71098E52AC7056E00E0E517 /* Debug */,
+				A71098E62AC7056E00E0E517 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

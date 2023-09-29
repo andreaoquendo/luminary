@@ -272,7 +272,9 @@ struct ContentView: View {
             if randomIndex == -1 {
                 return nil
             }
-            return quotes[quotes.count - randomIndex - 1]
+            let q = quotes[quotes.count - randomIndex - 1]
+            QuotesHelper.storeRandomQuote(quote: q.quote ?? "", date: q.date ?? Date())
+            return q
         }
         
         if getRandomIndex() == nil {
@@ -280,7 +282,9 @@ struct ContentView: View {
         }
         let val = quotes.count - (getRandomIndex() ?? 0) - 1
         
-        return quotes[val]
+        let q = quotes[val]
+        QuotesHelper.storeRandomQuote(quote: q.quote ?? "", date: q.date ?? Date())
+        return q
         // Fetch and return the quote based on the stored or generated randomIndex
     }
     

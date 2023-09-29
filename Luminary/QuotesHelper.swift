@@ -14,6 +14,23 @@ class QuotesHelper {
 //        sharedContainer?.set(quotes, forKey: "standByQuotes")
 //    }
     
+    static func storeRandomQuote(quote: String, date: Date) {
+        let dictionary: [String: Any] = [
+            "quote": quote,
+            "date": date
+        ]
+        sharedContainer?.set(dictionary, forKey: "RandomQuoteItem")
+    }
+
+    static func getRandomQuote() -> QuoteItem? {
+        if let dictionary = sharedContainer?.dictionary(forKey: "RandomQuoteItem"),
+           let quote = dictionary["quote"] as? String,
+           let date = dictionary["date"] as? Date {
+            return QuoteItem(quote: quote, date: date)
+        }
+        return nil
+    }
+    
     static func addQuote(quote: String, date: Date) {
             // Get existing items
         var items = getQuotes()

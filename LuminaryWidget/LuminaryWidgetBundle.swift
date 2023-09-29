@@ -2,7 +2,7 @@
 //  LuminaryWidgetBundle.swift
 //  LuminaryWidget
 //
-//  Created by Andrea Oquendo on 28/09/23.
+//  Created by Andrea Oquendo on 29/09/23.
 //
 
 import WidgetKit
