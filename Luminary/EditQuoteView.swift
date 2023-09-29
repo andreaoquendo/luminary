@@ -46,7 +46,7 @@ struct EditQuoteView: View {
                         .background(.clear)
                         .font(Font.custom("Baskervville-Regular", size: 16))
                         .padding(4)
-                        .frame(width: 342, height: 100, alignment: .leading)
+                        .frame(height: 100, alignment: .leading)
                         .background(Color.fadedLuminary)
                         .cornerRadius(4)
                 }

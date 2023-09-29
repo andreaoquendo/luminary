@@ -52,6 +52,7 @@ struct LuminaryWidgetEntryView : View {
             
             Spacer()
         }
+        
         .padding(.horizontal, 8)
         .frame(maxWidth: .infinity)
         .background(Color.primaryLuminary)
@@ -65,8 +66,8 @@ struct LuminaryWidget: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             LuminaryWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Quote of the Day")
+        .description("See your Luminary quote of the day.")
     }
 }
 

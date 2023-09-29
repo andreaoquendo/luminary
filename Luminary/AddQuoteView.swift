@@ -51,7 +51,7 @@ struct AddQuoteView: View {
                         .background(.clear)
                         .font(Font.custom("Baskervville-Regular", size: 16))
                         .padding(4)
-                        .frame(width: 342, height: 100, alignment: .leading)
+                        .frame(height: 100, alignment: .leading)
                         .background(Color.fadedLuminary)
                         .cornerRadius(4)
                 }
@@ -100,6 +100,34 @@ struct AddQuoteView: View {
             .padding(.top, 16)
             .background(.clear)
             
+            
+            HStack(alignment: .top, spacing: 10) {
+                Image(systemName: "lightbulb")
+                    .font(Font.custom("SF Pro", size: 16))
+                    .foregroundColor(.textLuminary)
+                
+                VStack(spacing: 4){
+                    Text("Quick tip!")
+                        .font(Font.custom("LibreBaskerville-Bold", size: 14))
+                        .bold()
+                        .frame(maxWidth: .infinity, alignment: .topLeading)
+                    Text("You can add a quote using Siri, just call \"Hey Siri, save a quote!\"")
+                      .frame(maxWidth: .infinity, alignment: .topLeading)
+                }
+                .font(
+                  Font.custom("Baskervville-Regular", size: 16)
+                )
+                .foregroundColor(.textLuminary)
+                
+            }
+            .padding(16)
+            .frame(maxWidth: .infinity, alignment: .topLeading)
+            .cornerRadius(4)
+            .overlay(
+              RoundedRectangle(cornerRadius: 4)
+                .inset(by: 0.5)
+                .stroke(.white, lineWidth: 1)
+            )
             Spacer()
         }
         .frame(maxHeight: .infinity)

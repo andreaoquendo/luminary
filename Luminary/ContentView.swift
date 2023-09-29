@@ -141,9 +141,27 @@ struct ContentView: View {
                     VStack(spacing: 16){
                         DropCapTextView(text: getRandomQuoteForToday()?.quote ?? "")
                         
-                        Text("— \(getRandomQuoteForToday()?.author ?? "") (\(getRandomQuoteForToday()?.outro ?? ""))")
-                            .font(Font.custom("Baskervville-Regular", size: 16))
-                            .frame(maxWidth: .infinity, alignment: .trailing)
+                        if ((getRandomQuoteForToday()?.author) != nil && (getRandomQuoteForToday()?.author) != "") {
+                            
+                            if ((getRandomQuoteForToday()?.outro) != nil && (getRandomQuoteForToday()?.outro) != ""){
+                                Text("— \(getRandomQuoteForToday()?.author ?? "") (\(getRandomQuoteForToday()?.outro ?? ""))")
+                                    .font(Font.custom("Baskervville-Regular", size: 16))
+                                    .frame(maxWidth: .infinity, alignment: .trailing)
+                            } else {
+                                Text("— \(getRandomQuoteForToday()?.author ?? "")")
+                                    .font(Font.custom("Baskervville-Regular", size: 16))
+                                    .frame(maxWidth: .infinity, alignment: .trailing)
+                                
+                            }
+                                
+                        }
+                        else {
+                            if ((getRandomQuoteForToday()?.outro) != nil && (getRandomQuoteForToday()?.outro) != ""){
+                                Text("(\(getRandomQuoteForToday()?.outro ?? ""))")
+                                    .font(Font.custom("Baskervville-Regular", size: 16))
+                                    .frame(maxWidth: .infinity, alignment: .trailing)
+                            }
+                        }
                         
                     }
                     .padding(.vertical, 64)
@@ -335,12 +353,19 @@ struct ContentView: View {
             Text(quote ?? "")
                 .font(Font.custom("Baskervville-Regular", size: 16))
             
-            if outro?.count ?? 0 > 0 {
-                Text("— \(author ?? "Unknown") (\(outro ?? ""))")
-                    .font(Font.custom("Baskervville-Regular", size: 12))
+            if author?.count ?? 0 > 0 {
+                if outro?.count ?? 0 > 0 {
+                    Text("— \(author ?? "Unknown") (\(outro ?? ""))")
+                        .font(Font.custom("Baskervville-Regular", size: 12))
+                } else {
+                    Text("— \(author ?? "Unknown")")
+                        .font(Font.custom("Baskervville-Regular", size: 12))
+                }
             } else {
-                Text("— \(author ?? "Unknown")")
-                    .font(Font.custom("Baskervville-Regular", size: 12))
+                if outro?.count ?? 0 > 0 {
+                    Text("(\(outro ?? ""))")
+                        .font(Font.custom("Baskervville-Regular", size: 12))
+                } 
             }
         }
         .padding(16)

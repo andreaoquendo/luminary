@@ -54,6 +54,7 @@ class CoreData {
         }
     }
 
+
     
 //    func getStoredDataFromCoreData() {
 //        let managedContext = persistentContainer.viewContext

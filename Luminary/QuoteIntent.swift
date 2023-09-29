@@ -3,8 +3,6 @@
 //  Luminary
 //
 //  Created by Andrea Oquendo on 29/09/23.
-//
-
 import Foundation
 import AppIntents
 
@@ -15,8 +13,8 @@ struct QuoteIntent: AppIntent, CustomIntentMigratedAppIntent, PredictableIntent 
     static var title: LocalizedStringResource = "Quote Intent"
     static var description = IntentDescription("Create a quote")
 
-    @Parameter(title: "Quote")
-    var quote: String?
+    @Parameter(title: "Quote", requestValueDialog: "What quote would you like to add?")
+    var quote: String
 
     static var parameterSummary: some ParameterSummary {
         Summary("Let's add a quote?") {
@@ -34,7 +32,8 @@ struct QuoteIntent: AppIntent, CustomIntentMigratedAppIntent, PredictableIntent 
     }
 
     func perform() async throws -> some IntentResult & ReturnsValue<String> {
-        // TODO: Place your refactored intent handler code here.
+        
+        QuotesHelper.addQuote(quote: quote, date: Date())
         return .result(value: String("Hello"))
     }
 }
