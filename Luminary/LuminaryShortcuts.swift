@@ -7,7 +7,9 @@ struct LuminaryShortcuts: AppShortcutsProvider {
             phrases: [
                 "Save a quote",
                 "Save a quote on Lumy",
-            ]
+            ],
+            shortTitle: "Save quote",
+            systemImageName: "icon"
         )
     }
 }

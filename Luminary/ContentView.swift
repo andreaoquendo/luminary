@@ -222,14 +222,14 @@ struct ContentView: View {
         .background(Color.primaryLuminary)
         .onAppear {
         
-            if viewDidLoad == false {
-                viewDidLoad = true
-                AppIntentLuminary.allowSiri()
-                AppIntentLuminary.quoteSiri()
-            }
+//            if viewDidLoad == false {
+//                viewDidLoad = true
+//                AppIntentLuminary.allowSiri()
+//                AppIntentLuminary.quoteSiri()
+//            }
             
             
-            var isFirstLaunch: Bool = !UserDefaults.standard.bool(forKey: "isFirstLaunch")
+            let isFirstLaunch: Bool = !UserDefaults.standard.bool(forKey: "isFirstLaunch")
             
             if isFirstLaunch {
                 print("hey")

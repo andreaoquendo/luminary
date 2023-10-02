@@ -1,8 +1,3 @@
-//
-//  QuoteIntent.swift
-//  Luminary
-//
-//  Created by Andrea Oquendo on 29/09/23.
 import Foundation
 import AppIntents
 
