@@ -200,21 +200,7 @@ struct ContentView: View {
         }
         .background(Color.primaryLuminary)
         .onAppear {
-            
-            
-            let isFirstLaunch: Bool = !UserDefaults.standard.bool(forKey: "isFirstLaunch")
-            
-            if isFirstLaunch {
-                addPreviewQuote(quote: "Growing old and dying is what gives meaning and beauty to the fleeting span of life. It's precisely because we age and die that our lives have value and nobility.", author: "Rengoku", outro: "Demon Slayer")
-                addPreviewQuote(quote: "A sound soul dwells within a sound mind & a sound body.", author: "Maka", outro: "Soul Eater")
-                addPreviewQuote(quote: "You should use your strength to help others.", author: "Itadori's Grandfather", outro: "Jujutsu Kaisen")
-                addPreviewQuote(quote: "It’s not about whether I can, I have to do it.", author: "Megumi Fushiguro", outro: "Jujutsu Kaisen")
-                addPreviewQuote(quote: "Dedication is a talent all on its own.", author: "Alphonse", outro: "Fullmetal Alchemist Brotherhood")
-                
-            } else {
-                print("ho")
-            }
-            
+            firstLaunch()
         }
         .onChange(of: scenePhase) { newPhase in
             
@@ -232,9 +218,18 @@ struct ContentView: View {
 
     }
     
-    
-    
-    
+    private func firstLaunch() {
+        let isFirstLaunch: Bool = !UserDefaults.standard.bool(forKey: "isFirstLaunch")
+        
+        if isFirstLaunch {
+            addPreviewQuote(quote: "Growing old and dying is what gives meaning and beauty to the fleeting span of life. It's precisely because we age and die that our lives have value and nobility.", author: "Rengoku", outro: "Demon Slayer")
+            addPreviewQuote(quote: "A sound soul dwells within a sound mind & a sound body.", author: "Maka", outro: "Soul Eater")
+            addPreviewQuote(quote: "You should use your strength to help others.", author: "Itadori's Grandfather", outro: "Jujutsu Kaisen")
+            addPreviewQuote(quote: "It’s not about whether I can, I have to do it.", author: "Megumi Fushiguro", outro: "Jujutsu Kaisen")
+            addPreviewQuote(quote: "Dedication is a talent all on its own.", author: "Alphonse", outro: "Fullmetal Alchemist Brotherhood")
+            
+        }
+    }
     
     private func todaysQuoteSub() -> String {
         
@@ -322,6 +317,9 @@ struct ContentView: View {
     }
 
     private func addPreviewQuote(quote: String, author: String, outro: String) {
+        
+        /* TO-DO */
+        
         let newQuote = Quote(context: CoreData.shared.persistentContainer.viewContext)
         newQuote.quote = quote
         newQuote.author = author
@@ -334,6 +332,7 @@ struct ContentView: View {
     }
     
     private func addQuote(quote: String, date: Date) {
+        /* TO-DO */
         let newQuote = Quote(context: CoreData.shared.persistentContainer.viewContext)
         newQuote.quote = quote
         newQuote.author = "Unknown"
