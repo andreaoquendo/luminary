@@ -27,7 +27,7 @@ struct QuoteIntent: AppIntent, CustomIntentMigratedAppIntent, PredictableIntent 
     }
 
     func perform() async throws -> some IntentResult & ReturnsValue<String> {
-        
+        // O que fazer depois de receber a frase
         QuotesHelper.addQuote(quote: quote, date: Date())
         return .result(value: String("Hello"))
     }

@@ -11,7 +11,6 @@ import SwiftUI
 struct LuminaryApp: App {
 
     let coreDataController = CoreData.shared
-    
 
     
     var body: some Scene {
@@ -19,7 +18,6 @@ struct LuminaryApp: App {
             ContentView()
                 .environment(\.managedObjectContext, coreDataController.persistentContainer.viewContext)
                 .onAppear {
-                    // Check if the app has been launched before
                     let isFirstLaunch = UserDefaults.standard.bool(forKey: "isFirstLaunch")
                     
                     if isFirstLaunch {

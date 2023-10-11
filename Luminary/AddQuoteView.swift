@@ -111,7 +111,7 @@ struct AddQuoteView: View {
                         .font(Font.custom("LibreBaskerville-Bold", size: 14))
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .topLeading)
-                    Text("You can add a quote using Siri, just call \"Hey Siri, save a quote!\"")
+                    Text("You can add a shortcut for easier addings and then just call \"Hey Siri, save a quote!\"")
                       .frame(maxWidth: .infinity, alignment: .topLeading)
                 }
                 .font(
@@ -126,7 +126,7 @@ struct AddQuoteView: View {
             .overlay(
               RoundedRectangle(cornerRadius: 4)
                 .inset(by: 0.5)
-                .stroke(.white, lineWidth: 1)
+                .stroke(Color.textLuminary, lineWidth: 1)
             )
             Spacer()
         }

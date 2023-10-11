@@ -124,11 +124,10 @@ struct ContentView: View {
     @State private var viewDidLoad = false
     
 
-    
-
     var body: some View {
         NavigationView {
             VStack{
+                
                 // Quote of the Day
                 VStack(spacing:8){
                     VStack(alignment: .leading, spacing: 8){
@@ -139,29 +138,11 @@ struct ContentView: View {
                     
                     
                     VStack(spacing: 16){
-                        DropCapTextView(text: getRandomQuoteForToday()?.quote ?? "")
+                        DropCapTextView(text: getTodaysQuote()?.quote ?? "There is no quote registered.")
                         
-                        if ((getRandomQuoteForToday()?.author) != nil && (getRandomQuoteForToday()?.author) != "") {
-                            
-                            if ((getRandomQuoteForToday()?.outro) != nil && (getRandomQuoteForToday()?.outro) != ""){
-                                Text("— \(getRandomQuoteForToday()?.author ?? "") (\(getRandomQuoteForToday()?.outro ?? ""))")
-                                    .font(Font.custom("Baskervville-Regular", size: 16))
-                                    .frame(maxWidth: .infinity, alignment: .trailing)
-                            } else {
-                                Text("— \(getRandomQuoteForToday()?.author ?? "")")
-                                    .font(Font.custom("Baskervville-Regular", size: 16))
-                                    .frame(maxWidth: .infinity, alignment: .trailing)
-                                
-                            }
-                                
-                        }
-                        else {
-                            if ((getRandomQuoteForToday()?.outro) != nil && (getRandomQuoteForToday()?.outro) != ""){
-                                Text("(\(getRandomQuoteForToday()?.outro ?? ""))")
-                                    .font(Font.custom("Baskervville-Regular", size: 16))
-                                    .frame(maxWidth: .infinity, alignment: .trailing)
-                            }
-                        }
+                        Text(todaysQuoteSub())
+                            .font(.appBody)
+                            .frame(maxWidth: .infinity, alignment: .trailing)
                         
                     }
                     .padding(.vertical, 64)
@@ -221,18 +202,11 @@ struct ContentView: View {
         }
         .background(Color.primaryLuminary)
         .onAppear {
-        
-//            if viewDidLoad == false {
-//                viewDidLoad = true
-//                AppIntentLuminary.allowSiri()
-//                AppIntentLuminary.quoteSiri()
-//            }
             
             
             let isFirstLaunch: Bool = !UserDefaults.standard.bool(forKey: "isFirstLaunch")
             
             if isFirstLaunch {
-                print("hey")
                 addPreviewQuote(quote: "Growing old and dying is what gives meaning and beauty to the fleeting span of life. It's precisely because we age and die that our lives have value and nobility.", author: "Rengoku", outro: "Demon Slayer")
                 addPreviewQuote(quote: "A sound soul dwells within a sound mind & a sound body.", author: "Maka", outro: "Soul Eater")
                 addPreviewQuote(quote: "You should use your strength to help others.", author: "Itadori's Grandfather", outro: "Jujutsu Kaisen")
@@ -260,12 +234,45 @@ struct ContentView: View {
 
     }
     
+    
+    
+    
+    
+    private func todaysQuoteSub() -> String {
+        
+        var text = ""
+        
+        if let quote = getTodaysQuote() {
+            if let author = quote.author {
+                if !author.isEmpty {
+                    text += "— \(author)"
+                    
+                    if let outro = quote.outro {
+                        if !outro.isEmpty {
+                            text += " (\(outro)"
+                        }
+                    }
+                } else {
+                    if let outro = quote.outro {
+                        if !outro.isEmpty {
+                            text += "(\(outro))"
+                        }
+                    }
+                }
+            }
+            
+        }
+        
+        return text
+    }
+
+    
     func storeRandomIndex(_ index: Int, forDate date: Date) {
         UserDefaults.standard.set(index, forKey: "RandomIndex")
         UserDefaults.standard.set(date, forKey: "RandomIndexDate")
     }
 
-    func getRandomIndex() -> Int? {
+    func getSavedIndex() -> Int? {
         return UserDefaults.standard.integer(forKey: "RandomIndex")
     }
 
@@ -283,22 +290,37 @@ struct ContentView: View {
         return randomIndex
     }
     
-    func getRandomQuoteForToday() -> Quote? {
+    func getTodaysQuote() -> Quote? {
+        
+        // If it's empty, there's no quote to show
+        if quotes.isEmpty {
+            return nil
+        }
+        
+        // Prevent if the user has deleted too much quotes
+        if let savedIndex = getSavedIndex() {
+            if savedIndex >= quotes.count {
+                _ = generateNewRandomIndex()
+            }
+        }
+
+        
         if isNewDay() {
             let randomIndex = generateNewRandomIndex()
             // Use this randomIndex to fetch the quote
             if randomIndex == -1 {
                 return nil
             }
+            
             let q = quotes[quotes.count - randomIndex - 1]
             QuotesHelper.storeRandomQuote(quote: q.quote ?? "", date: q.date ?? Date())
             return q
         }
         
-        if getRandomIndex() == nil {
+        if getSavedIndex() == nil {
             return nil
         }
-        let val = quotes.count - (getRandomIndex() ?? 0) - 1
+        let val = quotes.count - (getSavedIndex() ?? 0) - 1
         
         let q = quotes[val]
         QuotesHelper.storeRandomQuote(quote: q.quote ?? "", date: q.date ?? Date())

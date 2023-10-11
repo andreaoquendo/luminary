@@ -59,6 +59,8 @@
 		A77511C32AC35AAF00547B2E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77511C22AC35AAF00547B2E /* Colors.swift */; };
 		A77511C52AC3615800547B2E /* DMSerifDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A77511C42AC3615800547B2E /* DMSerifDisplay-Regular.ttf */; };
 		A77511C82AC3633200547B2E /* Baskervville-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A77511C72AC3633200547B2E /* Baskervville-Regular.ttf */; };
+		A7F2B3CE2AD7484300A5B835 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2B3CD2AD7484300A5B835 /* Fonts.swift */; };
+		A7F2B3CF2AD7484300A5B835 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2B3CD2AD7484300A5B835 /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +147,7 @@
 		A77511C42AC3615800547B2E /* DMSerifDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSerifDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		A77511C62AC3618A00547B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A77511C72AC3633200547B2E /* Baskervville-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baskervville-Regular.ttf"; sourceTree = "<group>"; };
+		A7F2B3CD2AD7484300A5B835 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,15 +260,13 @@
 		A71C417C2AC1CDF500858592 /* Luminary */ = {
 			isa = PBXGroup;
 			children = (
+				A7F2B3CC2AD747C300A5B835 /* Fonts */,
 				A71098ED2AC70AAF00E0E517 /* QuoteIntent.swift */,
 				A71098EF2AC70B9E00E0E517 /* LuminaryShortcuts.swift */,
 				A703E3B22AC3D70200A26B31 /* Luminary.entitlements */,
 				A77511C62AC3618A00547B2E /* Info.plist */,
 				A71C417D2AC1CDF500858592 /* LuminaryApp.swift */,
 				A71C417F2AC1CDF500858592 /* ContentView.swift */,
-				A71098F12AC7124B00E0E517 /* LibreBaskerville-Bold.ttf */,
-				A77511C42AC3615800547B2E /* DMSerifDisplay-Regular.ttf */,
-				A77511C72AC3633200547B2E /* Baskervville-Regular.ttf */,
 				A71C41812AC1CDF600858592 /* Assets.xcassets */,
 				A71C41862AC1CDF600858592 /* Persistence.swift */,
 				A71C41882AC1CDF600858592 /* Luminary.xcdatamodeld */,
@@ -286,6 +287,17 @@
 				A71C41842AC1CDF600858592 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A7F2B3CC2AD747C300A5B835 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A71098F12AC7124B00E0E517 /* LibreBaskerville-Bold.ttf */,
+				A77511C42AC3615800547B2E /* DMSerifDisplay-Regular.ttf */,
+				A77511C72AC3633200547B2E /* Baskervville-Regular.ttf */,
+				A7F2B3CD2AD7484300A5B835 /* Fonts.swift */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -487,6 +499,7 @@
 				A71098F72AC716C400E0E517 /* CoreData.swift in Sources */,
 				A71098D92AC7056D00E0E517 /* LuminaryWidgetLiveActivity.swift in Sources */,
 				A71098EA2AC7060400E0E517 /* QuotesHelper.swift in Sources */,
+				A7F2B3CF2AD7484300A5B835 /* Fonts.swift in Sources */,
 				A71098D72AC7056D00E0E517 /* LuminaryWidgetBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,6 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7F2B3CE2AD7484300A5B835 /* Fonts.swift in Sources */,
 				A703E3DB2AC3D8AA00A26B31 /* Intents.intentdefinition in Sources */,
 				A71098F02AC70B9E00E0E517 /* LuminaryShortcuts.swift in Sources */,
 				A703E3DE2AC4518C00A26B31 /* QuoteIntentHandler.swift in Sources */,
@@ -827,12 +841,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Luminary/Luminary.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Luminary/Preview Content\"";
 				DEVELOPMENT_TEAM = U6ZXY7569L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Luminary/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Lumy;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				INFOPLIST_KEY_NSSiriUsageDescription = "Use for adding quotes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -860,12 +876,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Luminary/Luminary.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Luminary/Preview Content\"";
 				DEVELOPMENT_TEAM = U6ZXY7569L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Luminary/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Lumy;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				INFOPLIST_KEY_NSSiriUsageDescription = "Use for adding quotes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
