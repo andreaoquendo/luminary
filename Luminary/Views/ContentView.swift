@@ -263,20 +263,6 @@ struct ContentView: View {
         
         return text
     }
-
-    
-    func storeRandomIndex(_ index: Int, forDate date: Date) {
-        UserDefaults.standard.set(index, forKey: "RandomIndex")
-        UserDefaults.standard.set(date, forKey: "RandomIndexDate")
-    }
-
-    func getSavedIndex() -> Int? {
-        return UserDefaults.standard.integer(forKey: "RandomIndex")
-    }
-
-    func getRandomIndexDate() -> Date? {
-        return UserDefaults.standard.object(forKey: "RandomIndexDate") as? Date
-    }
     
     func generateNewRandomIndex() -> Int {
         if quotes.count == 0 {
@@ -284,7 +270,7 @@ struct ContentView: View {
         }
         
         let randomIndex = Int.random(in: 0..<quotes.count) // Adjust this range accordingly
-        storeRandomIndex(randomIndex, forDate: Date())
+        QuotesHelper.storeQuoteIndex(randomIndex, forDate: Date())
         return randomIndex
     }
     
@@ -296,7 +282,7 @@ struct ContentView: View {
         }
         
         // Prevent if the user has deleted too much quotes
-        if let savedIndex = getSavedIndex() {
+        if let savedIndex = QuotesHelper.getSavedIndex() {
             if savedIndex >= quotes.count {
                 _ = generateNewRandomIndex()
             }
@@ -315,10 +301,10 @@ struct ContentView: View {
             return q
         }
         
-        if getSavedIndex() == nil {
+        if QuotesHelper.getSavedIndex() == nil {
             return nil
         }
-        let val = quotes.count - (getSavedIndex() ?? 0) - 1
+        let val = quotes.count - (QuotesHelper.getSavedIndex() ?? 0) - 1
         
         let q = quotes[val]
         QuotesHelper.storeRandomQuote(quote: q.quote ?? "", date: q.date ?? Date())
@@ -327,7 +313,7 @@ struct ContentView: View {
     }
     
     func isNewDay() -> Bool {
-        if let storedDate = getRandomIndexDate() {
+        if let storedDate = QuotesHelper.getQuoteDate() {
             let currentDate = Date()
             let calendar = Calendar.current
             return !calendar.isDate(storedDate, inSameDayAs: currentDate)
@@ -335,7 +321,6 @@ struct ContentView: View {
         return true
     }
 
-    
     private func addPreviewQuote(quote: String, author: String, outro: String) {
         let newQuote = Quote(context: CoreData.shared.persistentContainer.viewContext)
         newQuote.quote = quote
@@ -371,27 +356,27 @@ struct ContentView: View {
         
         var text = ""
         
-        if let localAuthor = author  {
-            if !localAuthor.isEmpty {
+        if let localAuthor = author, !localAuthor.isEmpty  {
               text += "— \(localAuthor) "
-            }
         }
         
-        if let localOutro = outro {
+        if let localOutro = outro, !localOutro.isEmpty {
             text += "(\(localOutro))"
         }
         
         return text.trim()
     }
     
-    private func QuoteItem(quote: String, author: String?, outro: String? = "") -> some View {
+    private func QuoteItem(quote: String, author: String?, outro: String? = nil) -> some View {
         VStack(alignment: .leading, spacing: 10) {
             
             Text(quote)
                 .font(.appBody)
             
-            Text(quoteItemText(author: author, outro: outro))
-                .font(.appQuoteSubtitle)
+            if !quoteItemText(author: author, outro: outro).isEmpty{
+                Text(quoteItemText(author: author, outro: outro))
+                    .font(.appQuoteSubtitle)
+            }
             
         }
         .padding(16)

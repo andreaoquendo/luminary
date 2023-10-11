@@ -8,6 +8,7 @@ struct QuoteItem {
 class QuotesHelper {
     static let sharedContainer = UserDefaults(suiteName: "group.mainlumy")
 
+
     
     static func storeRandomQuote(quote: String, date: Date) {
         let dictionary: [String: Any] = [
@@ -30,7 +31,7 @@ class QuotesHelper {
             // Get existing items
         var items = getQuotes()
         
-        var quoteItem = QuoteItem(quote: quote, date: date)
+        let quoteItem = QuoteItem(quote: quote, date: date)
         // Add the new item
         items.append(quoteItem)
         
@@ -45,9 +46,6 @@ class QuotesHelper {
         sharedContainer?.removeObject(forKey: "standByQuotes")
     }
 
-//    static func getQuotes() -> [String] {
-//        return sharedContainer?.stringArray(forKey: "standByQuotes") ?? []
-//    }
     static func getQuotes() -> [QuoteItem] {
             if let itemData = sharedContainer?.array(forKey: "standByQuotes") as? [[String: Any]] {
                 let items = itemData.compactMap {
@@ -60,4 +58,19 @@ class QuotesHelper {
             }
             return []
         }
+    
+    static func storeQuoteIndex(_ index: Int, forDate date: Date) {
+        sharedContainer?.set(index, forKey: "QuoteIndex")
+        sharedContainer?.set(date, forKey: "QuoteDate")
+    }
+
+    static func getSavedIndex() -> Int? {
+        return sharedContainer?.integer(forKey: "QuoteIndex")
+    }
+
+    static func getQuoteDate() -> Date? {
+        return sharedContainer?.object(forKey: "QuoteDate") as? Date
+    }
+    
+   
 }
