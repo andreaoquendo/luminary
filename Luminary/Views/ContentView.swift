@@ -177,7 +177,7 @@ struct ContentView: View {
 
                                 } label: {
                                     QuoteItem(
-                                        quote: quote.quote,
+                                        quote: quote.quote!,
                                         author: quote.author,
                                         outro: quote.outro
                                     )
@@ -367,52 +367,40 @@ struct ContentView: View {
             .background(.white)
     }
     
-    private func QuoteItem(quote: String? = "", author: String? = "", outro: String? = "") -> some View {
+    private func quoteItemText(author: String?, outro: String?) -> String {
+        
+        var text = ""
+        
+        if let localAuthor = author  {
+            if !localAuthor.isEmpty {
+              text += "— \(localAuthor) "
+            }
+        }
+        
+        if let localOutro = outro {
+            text += "(\(localOutro))"
+        }
+        
+        return text.trim()
+    }
+    
+    private func QuoteItem(quote: String, author: String?, outro: String? = "") -> some View {
         VStack(alignment: .leading, spacing: 10) {
             
-            Text(quote ?? "")
-                .font(Font.custom("Baskervville-Regular", size: 16))
+            Text(quote)
+                .font(.appBody)
             
-            if author?.count ?? 0 > 0 {
-                if outro?.count ?? 0 > 0 {
-                    Text("— \(author ?? "Unknown") (\(outro ?? ""))")
-                        .font(Font.custom("Baskervville-Regular", size: 12))
-                } else {
-                    Text("— \(author ?? "Unknown")")
-                        .font(Font.custom("Baskervville-Regular", size: 12))
-                }
-            } else {
-                if outro?.count ?? 0 > 0 {
-                    Text("(\(outro ?? ""))")
-                        .font(Font.custom("Baskervville-Regular", size: 12))
-                } 
-            }
+            Text(quoteItemText(author: author, outro: outro))
+                .font(.appQuoteSubtitle)
+            
         }
         .padding(16)
         .multilineTextAlignment(.leading)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .multilineTextAlignment(.leading)
         .background(Color.fadedLuminary)
-        .cornerRadius(4)
         .foregroundColor(.textLuminary)
+        .cornerRadius(4)
         
-    }
-    
-    
-    
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { quotes[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
     }
     
 }

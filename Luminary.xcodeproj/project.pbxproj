@@ -61,6 +61,8 @@
 		A77511C82AC3633200547B2E /* Baskervville-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A77511C72AC3633200547B2E /* Baskervville-Regular.ttf */; };
 		A7F2B3CE2AD7484300A5B835 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2B3CD2AD7484300A5B835 /* Fonts.swift */; };
 		A7F2B3CF2AD7484300A5B835 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2B3CD2AD7484300A5B835 /* Fonts.swift */; };
+		A7F2B3D42AD74FAC00A5B835 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2B3D32AD74FAC00A5B835 /* String.swift */; };
+		A7F2B3D52AD74FAC00A5B835 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2B3D32AD74FAC00A5B835 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +150,7 @@
 		A77511C62AC3618A00547B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A77511C72AC3633200547B2E /* Baskervville-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baskervville-Regular.ttf"; sourceTree = "<group>"; };
 		A7F2B3CD2AD7484300A5B835 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		A7F2B3D32AD74FAC00A5B835 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +263,7 @@
 		A71C417C2AC1CDF500858592 /* Luminary */ = {
 			isa = PBXGroup;
 			children = (
+				A7F2B3D22AD74F9800A5B835 /* Extensions */,
 				A7F2B3D12AD74B6600A5B835 /* Views */,
 				A7F2B3D02AD74B5000A5B835 /* Manager */,
 				A7F2B3CC2AD747C300A5B835 /* Fonts */,
@@ -314,6 +318,14 @@
 				A70065E02AC59EEA0010837F /* EditQuoteView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A7F2B3D22AD74F9800A5B835 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A7F2B3D32AD74FAC00A5B835 /* String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -510,6 +522,7 @@
 			files = (
 				A71098DB2AC7056D00E0E517 /* LuminaryWidget.swift in Sources */,
 				A71098F62AC716BD00E0E517 /* Luminary.xcdatamodeld in Sources */,
+				A7F2B3D52AD74FAC00A5B835 /* String.swift in Sources */,
 				A71098EB2AC7061400E0E517 /* Colors.swift in Sources */,
 				A71098E02AC7056E00E0E517 /* LuminaryWidget.intentdefinition in Sources */,
 				A71098F72AC716C400E0E517 /* CoreData.swift in Sources */,
@@ -538,6 +551,7 @@
 				A71C41802AC1CDF500858592 /* ContentView.swift in Sources */,
 				A71C418A2AC1CDF600858592 /* Luminary.xcdatamodeld in Sources */,
 				A70065E12AC59EEA0010837F /* EditQuoteView.swift in Sources */,
+				A7F2B3D42AD74FAC00A5B835 /* String.swift in Sources */,
 				A71C41912AC1E4BF00858592 /* AddQuoteView.swift in Sources */,
 				A71C417E2AC1CDF500858592 /* LuminaryApp.swift in Sources */,
 			);
@@ -857,7 +871,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Luminary/Luminary.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Luminary/Preview Content\"";
 				DEVELOPMENT_TEAM = U6ZXY7569L;
 				ENABLE_PREVIEWS = YES;
@@ -892,7 +906,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Luminary/Luminary.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Luminary/Preview Content\"";
 				DEVELOPMENT_TEAM = U6ZXY7569L;
 				ENABLE_PREVIEWS = YES;
