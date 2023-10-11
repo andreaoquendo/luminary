@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A70065D02AC4757F0010837F /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70065CF2AC4757F0010837F /* CoreData.swift */; };
 		A70065D12AC475810010837F /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70065CF2AC4757F0010837F /* CoreData.swift */; };
-		A70065D22AC475810010837F /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70065CF2AC4757F0010837F /* CoreData.swift */; };
 		A70065D32AC475A60010837F /* Luminary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A71C41882AC1CDF600858592 /* Luminary.xcdatamodeld */; };
 		A70065D42AC475AA0010837F /* Luminary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A71C41882AC1CDF600858592 /* Luminary.xcdatamodeld */; };
 		A70065D52AC4B9850010837F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C41862AC1CDF600858592 /* Persistence.swift */; };
@@ -263,6 +262,7 @@
 		A71C417C2AC1CDF500858592 /* Luminary */ = {
 			isa = PBXGroup;
 			children = (
+				A71C417D2AC1CDF500858592 /* LuminaryApp.swift */,
 				A7F2B3D22AD74F9800A5B835 /* Extensions */,
 				A7F2B3D12AD74B6600A5B835 /* Views */,
 				A7F2B3D02AD74B5000A5B835 /* Manager */,
@@ -271,14 +271,11 @@
 				A71098EF2AC70B9E00E0E517 /* LuminaryShortcuts.swift */,
 				A703E3B22AC3D70200A26B31 /* Luminary.entitlements */,
 				A77511C62AC3618A00547B2E /* Info.plist */,
-				A71C417D2AC1CDF500858592 /* LuminaryApp.swift */,
 				A71C41812AC1CDF600858592 /* Assets.xcassets */,
-				A71C41862AC1CDF600858592 /* Persistence.swift */,
 				A71C41882AC1CDF600858592 /* Luminary.xcdatamodeld */,
 				A71C41832AC1CDF600858592 /* Preview Content */,
 				A77511C22AC35AAF00547B2E /* Colors.swift */,
 				A703E3E02AC4536300A26B31 /* AppIntent.swift */,
-				A70065CF2AC4757F0010837F /* CoreData.swift */,
 			);
 			path = Luminary;
 			sourceTree = "<group>";
@@ -305,6 +302,8 @@
 		A7F2B3D02AD74B5000A5B835 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				A70065CF2AC4757F0010837F /* CoreData.swift */,
+				A71C41862AC1CDF600858592 /* Persistence.swift */,
 				A70065DD2AC4FE220010837F /* QuotesHelper.swift */,
 			);
 			path = Manager;
@@ -509,7 +508,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A70065D22AC475810010837F /* CoreData.swift in Sources */,
 				A70065E52AC5AA120010837F /* Colors.swift in Sources */,
 				A70065D42AC475AA0010837F /* Luminary.xcdatamodeld in Sources */,
 				A703E3C82AC3D7D000A26B31 /* IntentViewController.swift in Sources */,

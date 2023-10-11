@@ -128,23 +128,12 @@ struct EditQuoteView: View {
     }
     
     private func deleteQuote() {
-        viewContext.delete(editedQuote)
-        do {
-            try viewContext.save()
-        } catch {
-
-            let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-        }
+        CoreData.shared.deleteQuote(quote: editedQuote)
+        presentationMode.wrappedValue.dismiss()
     }
     
     private func saveQuote() {
-        editedQuote.quote = quote
-        editedQuote.author = author
-        editedQuote.date = date
-        editedQuote.outro = outro
-
-        CoreData.shared.saveContext()
+        CoreData.shared.editQuote(editedQuote: editedQuote, quote: quote, author: author, date: date, outro: outro)
         presentationMode.wrappedValue.dismiss()
         
   

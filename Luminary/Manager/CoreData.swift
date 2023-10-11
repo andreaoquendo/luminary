@@ -1,8 +1,5 @@
 import Foundation
-import SwiftUI
 import CoreData
-
-
 
 class CoreData {
     static let shared = CoreData()
@@ -53,26 +50,37 @@ class CoreData {
             return []
         }
     }
-
-
     
-//    func getStoredDataFromCoreData() {
-//        let managedContext = persistentContainer.viewContext
-//
-//        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Quote")
-//        do {
-//            let result = try managedContext.fetch(fetchRequest)
-//            //Iterate between all the results saved into EntityName
-//            for data in result {
-//                // Do something with the stored data
-//            }
-//        } catch let error as NSError {
-//             // Replace this implementation with code to handle the error appropriately.
-//             // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-//             let nserror = error as NSError
-//             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-//        }
-//    }
+    func saveQuote(quote: String, author: String = "", date: Date, outro: String = "") {
+        
+        let context = persistentContainer.viewContext
+        let newQuote = Quote(context: context)
+        
+        newQuote.quote = quote
+        newQuote.author = author
+        newQuote.date = date
+        newQuote.outro = outro
+
+        saveContext()
+        
+  
+    }
+    
+    func deleteQuote(quote: Quote){
+        let context = persistentContainer.viewContext
+        
+        context.delete(quote)
+        saveContext()
+    }
+    
+    func editQuote(editedQuote: Quote, quote: String, author: String, date: Date, outro: String){
+        editedQuote.quote = quote
+        editedQuote.author = author
+        editedQuote.date = date
+        editedQuote.outro = outro
+
+        saveContext()
+    }
     
     func saveContext() {
         let context = persistentContainer.viewContext

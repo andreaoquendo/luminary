@@ -14,8 +14,8 @@
             filePath = "Luminary/CoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
             landmarkName = "persistentContainer"
             landmarkType = "24">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "Luminary/CoreData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
             landmarkName = "persistentContainer"
             landmarkType = "24">
          </BreakpointContent>

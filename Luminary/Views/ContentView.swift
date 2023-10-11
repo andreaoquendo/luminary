@@ -18,7 +18,7 @@ struct DropCapTextView: View {
         VStack(alignment: .leading, spacing: -4) {
             HStack(alignment: .center, spacing: 10){
                 Text(text.prefix(1))
-                    .font(Font.custom("DMSerifDisplay-Regular", size: 64))
+                    .font(.dropCapFirstLetter)
                     .frame(width:42, height: 70)
                 GeometryReader { geometry in
                     HStack(alignment: .center){
@@ -46,7 +46,7 @@ struct DropCapTextView: View {
                 .multilineTextAlignment(.leading)
                 .fixedSize(horizontal: false, vertical: true)
         }
-        .font(Font.custom("Baskervville-Regular", size: 22))
+        .font(.dropCapText)
     }
 
     private func textWithCaps() -> String {
@@ -83,7 +83,7 @@ struct DropCapTextView: View {
         if text.count > aux {
             let t = String(text.dropFirst().prefix(aux).last ?? " ")
             if t == " " {
-                return String(text.dropFirst(aux).trimmingCharacters(in: .whitespacesAndNewlines))
+                return String(text.dropFirst(aux)).trim()
             } else {
                 let word = text.dropFirst().prefix(aux)
                 let a = Array(word).reversed()
@@ -96,7 +96,7 @@ struct DropCapTextView: View {
                     }
                 }
                 
-                return String(text.dropFirst(idx).trimmingCharacters(in: .whitespacesAndNewlines))
+                return String(text.dropFirst(idx)).trim()
                 
             }
         }
@@ -112,13 +112,10 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) var viewContext
     @Environment(\.scenePhase) var scenePhase
     
-    
     @FetchRequest(sortDescriptors: [
         NSSortDescriptor(keyPath: \Quote.date, ascending: false)],
         animation: .default)
     var quotes: FetchedResults<Quote>
-    
-    @State private var viewDidLoad = false
     
 
     var body: some View {
@@ -332,14 +329,16 @@ struct ContentView: View {
     }
     
     private func addQuote(quote: String, date: Date) {
+        
+        CoreData.shared.saveQuote(quote: quote, date: date)
         /* TO-DO */
-        let newQuote = Quote(context: CoreData.shared.persistentContainer.viewContext)
-        newQuote.quote = quote
-        newQuote.author = "Unknown"
-        newQuote.date = date
-        newQuote.outro = ""
-
-        CoreData.shared.saveContext()
+//        let newQuote = Quote(context: CoreData.shared.persistentContainer.viewContext)
+//        newQuote.quote = quote
+//        newQuote.author = "Unknown"
+//        newQuote.date = date
+//        newQuote.outro = ""
+//
+//        CoreData.shared.saveContext()
         
   
     }

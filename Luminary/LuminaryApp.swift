@@ -18,6 +18,7 @@ struct LuminaryApp: App {
             ContentView()
                 .environment(\.managedObjectContext, coreDataController.persistentContainer.viewContext)
                 .onAppear {
+                    /* TO-DO */
                     let isFirstLaunch = UserDefaults.standard.bool(forKey: "isFirstLaunch")
                     
                     if isFirstLaunch {

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct AddQuoteView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    
     @Environment(\.presentationMode) var presentationMode
     
     @State private var quote = ""
@@ -25,7 +24,7 @@ struct AddQuoteView: View {
                     HStack(){
                         Spacer()
                         Text("add quote")
-                            .font(Font.custom("DMSerifDisplay-Regular", size: 24))
+                            .font(.appTitle)
                         Spacer()
                     }
                     HStack(){
@@ -49,18 +48,18 @@ struct AddQuoteView: View {
                     TextEditor(text: $quote)
                         .scrollContentBackground(.hidden) // <- Hide it
                         .background(.clear)
-                        .font(Font.custom("Baskervville-Regular", size: 16))
+                        .font(.appBody)
                         .padding(4)
                         .frame(height: 100, alignment: .leading)
                         .background(Color.fadedLuminary)
                         .cornerRadius(4)
                 }
-                .font(Font.custom("Baskervville-Regular", size: 16))
+                .font(.appBody)
                 
                 VStack(alignment: .leading, spacing:10){
                     Text("Author:")
                     TextField("Author", text: $author)
-                        .font(Font.custom("Baskervville-Regular", size: 16))
+                        .font(.appBody)
                         .padding(8)
                         .background(Color.fadedLuminary)
                         .cornerRadius(4)
@@ -70,12 +69,12 @@ struct AddQuoteView: View {
                 VStack(alignment: .leading, spacing:10){
                     Text("Origin:")
                     TextField("Book of Tales", text: $outro)
-                        .font(Font.custom("Baskervville-Regular", size: 16))
+                        .font(.appBody)
                         .padding(8)
                         .background(Color.fadedLuminary)
                         .cornerRadius(4)
                 }
-                .font(Font.custom("Baskervville-Regular", size: 16))
+                .font(.appBody)
             }
             .padding(.vertical, 10)
             
@@ -88,7 +87,7 @@ struct AddQuoteView: View {
                     Text("Add Quote")
                         .padding(.horizontal, 16)
                         .padding(.vertical, 8)
-                        .font(Font.custom("Baskervville-Regular", size: 16))
+                        .font(.appBody)
                         .background(.clear)
                         .overlay(
                             RoundedRectangle(cornerRadius: 4)
@@ -147,14 +146,7 @@ struct AddQuoteView: View {
     }
     
     private func addQuote() {
-    let newQuote = Quote(context: CoreData.shared.persistentContainer.viewContext)
-        newQuote.quote = quote
-        newQuote.author = author
-        newQuote.date = date
-        newQuote.outro = outro
-        print(newQuote)
-
-        CoreData.shared.saveContext()
+        CoreData.shared.saveQuote(quote: quote, author: author, date: date, outro: outro)
         presentationMode.wrappedValue.dismiss()
         
   
