@@ -132,7 +132,7 @@ struct ContentView: View {
                 VStack(spacing:8){
                     VStack(alignment: .leading, spacing: 8){
                         Text("quote of the day")
-                            .font(Font.custom("DMSerifDisplay-Regular", size: 24))
+                            .font(.appTitle)
                         Line()
                     }
                     
@@ -149,13 +149,14 @@ struct ContentView: View {
                 }
                 
                 Spacer()
+                
                 VStack(spacing: 16){
         
                     VStack(alignment: .leading, spacing:8){
                         HStack(){
                             Text("your quotes")
                                 .foregroundColor(.textLuminary)
-                                .font(Font.custom("DMSerifDisplay-Regular", size: 24))
+                                .font(.appTitle)
 
                             Spacer()
 
