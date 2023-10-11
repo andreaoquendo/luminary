@@ -8,11 +8,6 @@ struct QuoteItem {
 class QuotesHelper {
     static let sharedContainer = UserDefaults(suiteName: "group.mainlumy")
 
-//    static func addQuote(quote: String, date: Date) {
-//        var quotes = sharedContainer?.stringArray(forKey: "standByQuotes") ?? []
-//        quotes.append(quote)
-//        sharedContainer?.set(quotes, forKey: "standByQuotes")
-//    }
     
     static func storeRandomQuote(quote: String, date: Date) {
         let dictionary: [String: Any] = [

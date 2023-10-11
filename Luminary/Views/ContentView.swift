@@ -29,13 +29,10 @@ struct DropCapTextView: View {
                                 Color.clear.onAppear {
                                     // Calculate the number of characters that fit on one line
                                     let maxWidth = geometry.size.width
-                                    let font = UIFont(name: "Baskervville-Regular", size: 22) // Change to your desired font
-                                    
-                                    // Calculate the approximate number of characters that fit in one line
+                                    let font = UIFont(name: "Baskervville-Regular", size: 22)
                                     let approximateCharactersPerLine = Int(maxWidth / (font?.pointSize ?? 1))
                                     aux = approximateCharactersPerLine * 5 - 8
                                     
-                                    print("Approximate characters per line: \(approximateCharactersPerLine)")
                                 }
                             )
                     }
@@ -250,7 +247,7 @@ struct ContentView: View {
                     
                     if let outro = quote.outro {
                         if !outro.isEmpty {
-                            text += " (\(outro)"
+                            text += " (\(outro))"
                         }
                     }
                 } else {
