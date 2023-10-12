@@ -8,6 +8,7 @@
 import SwiftUI
 import CoreData
 import Combine
+import WidgetKit
 
 
 struct DropCapTextView: View {
@@ -210,6 +211,9 @@ struct ContentView: View {
                 }
                 
             }
+            else {
+                WidgetCenter.shared.reloadAllTimelines()
+            }
             
         }
 
@@ -301,7 +305,6 @@ struct ContentView: View {
         let q = quotes[val]
         QuotesHelper.storeRandomQuote(quote: q.quote ?? "", date: q.date ?? Date())
         return q
-        // Fetch and return the quote based on the stored or generated randomIndex
     }
     
     func isNewDay() -> Bool {
@@ -329,18 +332,7 @@ struct ContentView: View {
     }
     
     private func addQuote(quote: String, date: Date) {
-        
         CoreData.shared.saveQuote(quote: quote, date: date)
-        /* TO-DO */
-//        let newQuote = Quote(context: CoreData.shared.persistentContainer.viewContext)
-//        newQuote.quote = quote
-//        newQuote.author = "Unknown"
-//        newQuote.date = date
-//        newQuote.outro = ""
-//
-//        CoreData.shared.saveContext()
-        
-  
     }
 
     private func Line () -> some View {

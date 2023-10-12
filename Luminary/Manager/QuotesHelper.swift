@@ -15,8 +15,42 @@ class QuotesHelper {
         ]
         sharedContainer?.set(dictionary, forKey: "RandomQuoteItem")
     }
+    
+    static func updateRandomQuote(){
+        func isNewDay() -> Bool {
+            if let storedDate = getQuoteDate() {
+                let currentDate = Date()
+                let calendar = Calendar.current
+                return !calendar.isDate(storedDate, inSameDayAs: currentDate)
+            }
+            return true
+        }
+        
+        func generateNewRandomIndex() -> Int {
+            if quotes.count == 0 {
+                return -1
+            }
+            
+            let randomIndex = Int.random(in: 0..<quotes.count) // Adjust this range accordingly
+            storeQuoteIndex(randomIndex, forDate: Date())
+            return randomIndex
+        }
+        
+        if isNewDay() == false { return }
+        
+        let quotes = CoreData.shared.getStoredDataFromCoreData()
+        
+        let newIndex = generateNewRandomIndex()
+        let q = quotes[quotes.count - newIndex - 1]
+        
+        
+        storeRandomQuote(quote: q.quote ?? "", date: q.date ?? Date())
+
+    }
 
     static func getRandomQuote() -> QuoteItem? {
+        updateRandomQuote()
+        
         if let dictionary = sharedContainer?.dictionary(forKey: "RandomQuoteItem"),
            let quote = dictionary["quote"] as? String,
            let date = dictionary["date"] as? Date {

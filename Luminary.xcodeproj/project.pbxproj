@@ -58,6 +58,8 @@
 		A77511C32AC35AAF00547B2E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77511C22AC35AAF00547B2E /* Colors.swift */; };
 		A77511C52AC3615800547B2E /* DMSerifDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A77511C42AC3615800547B2E /* DMSerifDisplay-Regular.ttf */; };
 		A77511C82AC3633200547B2E /* Baskervville-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A77511C72AC3633200547B2E /* Baskervville-Regular.ttf */; };
+		A78818702AD78B9700CDA7AE /* WidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A788186F2AD78B9700CDA7AE /* WidgetExtension.swift */; };
+		A78818712AD78C6D00CDA7AE /* WidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A788186F2AD78B9700CDA7AE /* WidgetExtension.swift */; };
 		A7F2B3CE2AD7484300A5B835 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2B3CD2AD7484300A5B835 /* Fonts.swift */; };
 		A7F2B3CF2AD7484300A5B835 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2B3CD2AD7484300A5B835 /* Fonts.swift */; };
 		A7F2B3D42AD74FAC00A5B835 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2B3D32AD74FAC00A5B835 /* String.swift */; };
@@ -148,6 +150,7 @@
 		A77511C42AC3615800547B2E /* DMSerifDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSerifDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		A77511C62AC3618A00547B2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A77511C72AC3633200547B2E /* Baskervville-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baskervville-Regular.ttf"; sourceTree = "<group>"; };
+		A788186F2AD78B9700CDA7AE /* WidgetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetExtension.swift; sourceTree = "<group>"; };
 		A7F2B3CD2AD7484300A5B835 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		A7F2B3D32AD74FAC00A5B835 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -231,6 +234,7 @@
 				A71098DC2AC7056D00E0E517 /* LuminaryWidget.intentdefinition */,
 				A71098DD2AC7056E00E0E517 /* Assets.xcassets */,
 				A71098DF2AC7056E00E0E517 /* Info.plist */,
+				A788186F2AD78B9700CDA7AE /* WidgetExtension.swift */,
 			);
 			path = LuminaryWidget;
 			sourceTree = "<group>";
@@ -509,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A70065E52AC5AA120010837F /* Colors.swift in Sources */,
+				A78818712AD78C6D00CDA7AE /* WidgetExtension.swift in Sources */,
 				A70065D42AC475AA0010837F /* Luminary.xcdatamodeld in Sources */,
 				A703E3C82AC3D7D000A26B31 /* IntentViewController.swift in Sources */,
 			);
@@ -519,6 +524,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A71098DB2AC7056D00E0E517 /* LuminaryWidget.swift in Sources */,
+				A78818702AD78B9700CDA7AE /* WidgetExtension.swift in Sources */,
 				A71098F62AC716BD00E0E517 /* Luminary.xcdatamodeld in Sources */,
 				A7F2B3D52AD74FAC00A5B835 /* String.swift in Sources */,
 				A71098EB2AC7061400E0E517 /* Colors.swift in Sources */,
