@@ -13,39 +13,50 @@ import WidgetKit
 
 struct DropCapTextView: View {
     let text: String
-    @State var aux: Int = 70
+    @State var aux: Int = 200
+    @State var maxSize: CGSize = .zero
+    
 
     var body: some View {
         VStack(alignment: .leading, spacing: -4) {
-            HStack(alignment: .center, spacing: 10){
+            HStack(alignment: .center, spacing: 8){
                 Text(text.prefix(1))
                     .font(.dropCapFirstLetter)
                     .frame(width:42, height: 70)
                 GeometryReader { geometry in
+                    
                     HStack(alignment: .center){
+                    
                         Text(textWithCaps())
                             .multilineTextAlignment(.leading)
-                            .fixedSize(horizontal: false, vertical: true)
-                            .background(
-                                Color.clear.onAppear {
-                                    // Calculate the number of characters that fit on one line
-                                    let maxWidth = geometry.size.width
-                                    let font = UIFont(name: "Baskervville-Regular", size: 22)
-                                    let approximateCharactersPerLine = Int(maxWidth / (font?.pointSize ?? 1))
-                                    aux = approximateCharactersPerLine * 5 - 8
-                                    
-                                }
-                            )
+//                            .
+//                            .lineLimit(2)
+//                            .fixedSize(horizontal: false, vertical: true)
+                            
                     }
-                    .frame(maxHeight: .infinity)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                    .onAppear {
+                        maxSize = geometry.size
+                    }
+                    .onChange(of: geometry.size) { newSize in
+                        maxSize = newSize
+//                        print(maxSize) // prints (320.0, 457.0)
+                        
+                        let font = UIFont(name: "Baskervville-Regular", size: 22)
+                        let approximateCharactersPerLine = Int(maxSize.width / (font?.pointSize ?? 1))
+                        aux = approximateCharactersPerLine * 5 - 8
+                        print("chars")
+                        print(approximateCharactersPerLine)
+                      }
+                    
                     .padding(0)
                         
                 }
-                .frame(height:70)
             }
             Text(textWithoutCaps())
                 .multilineTextAlignment(.leading)
-                .fixedSize(horizontal: false, vertical: true)
+                .lineLimit(10)
+//                .fixedSize(horizontal: false, vertical: true)
         }
         .font(.dropCapText)
     }
@@ -120,59 +131,64 @@ struct ContentView: View {
     
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
+            
             VStack{
-                
-                // Quote of the Day
-                VStack(spacing:8){
-                    VStack(alignment: .leading, spacing: 8){
-                        Text("quote of the day")
-                            .font(.appTitle)
-                        Line()
+                ScrollView(){
+                    
+                    // Quote of the Day
+                    VStack(spacing:8){
+                        VStack(alignment: .leading, spacing: 8){
+                            Text("quote of the day")
+                                .font(.appTitle)
+                            Line()
+                        }
+                        
+                        
+                        VStack(spacing: 16){
+                            //                        DropCapTextView(text: getTodaysQuote()?.quote ?? "There is no quote registered.")
+                            DropCapTextView(text: getTodaysQuote()?.quote ?? "There is no quote registered.")
+                            
+                            Text(todaysQuoteSub())
+                                .font(.appBody)
+                                .frame(maxWidth: .infinity, alignment: .trailing)
+                            
+                        }
+                        .padding(.top, 40)
+                        .padding(.bottom, 36)
+                        
                     }
                     
+                    Spacer()
                     
                     VStack(spacing: 16){
-                        DropCapTextView(text: getTodaysQuote()?.quote ?? "There is no quote registered.")
                         
-                        Text(todaysQuoteSub())
-                            .font(.appBody)
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                        
-                    }
-                    .padding(.vertical, 64)
-                }
-                
-                Spacer()
-                
-                VStack(spacing: 16){
-        
-                    VStack(alignment: .leading, spacing:8){
-                        HStack(){
-                            Text("your quotes")
-                                .foregroundColor(.textLuminary)
-                                .font(.appTitle)
-
-                            Spacer()
-
-                            NavigationLink(destination: AddQuoteView()) {
-                                Label("Add quote", systemImage: "plus")
-                                    .labelStyle(.iconOnly)
+                        VStack(alignment: .leading, spacing:8){
+                            HStack(){
+                                Text("your quotes")
                                     .foregroundColor(.textLuminary)
+                                    .font(.appTitle)
+                                
+                                Spacer()
+                                
+                                NavigationLink(destination: AddQuoteView()) {
+                                    Label("Add quote", systemImage: "plus")
+                                        .labelStyle(.iconOnly)
+                                        .foregroundColor(.textLuminary)
+                                }
+                                
                             }
-
+                            
+                            Line()
                         }
-
-                        Line()
-                    }
-                    
-                    ScrollView(){
+                        
+                        
                         VStack(spacing: 16){
                             ForEach(quotes) { quote in
                                 
                                 NavigationLink {
                                     EditQuoteView(editedQuote: quote)
-
+                                    
                                 } label: {
                                     QuoteItem(
                                         quote: quote.quote!,
@@ -182,18 +198,19 @@ struct ContentView: View {
                                 }
                             }
                         }
+                        
+                        
                     }
-                    .scrollIndicators(.hidden)
-
+                    
                 }
-                
-
+                .scrollIndicators(.hidden)
                 
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 16)
             .background(Color.primaryLuminary)
             .foregroundColor(.textLuminary)
+            
             
         }
         .background(Color.primaryLuminary)
@@ -383,6 +400,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-//            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
