@@ -1,12 +1,12 @@
 import AppIntents
 
 struct LuminaryShortcuts: AppShortcutsProvider {
-    static var appShortcuts: [AppShortcut] {
+    @AppShortcutsBuilder static var appShortcuts: [AppShortcut] {
         AppShortcut(
             intent: QuoteIntent(),
             phrases: [
                 "Save a quote",
-                "Save a quote on Lumy",
+                "Save a quote on \(.applicationName)",
             ],
             shortTitle: "Save quote",
             systemImageName: "arrow.up.circle.fill"

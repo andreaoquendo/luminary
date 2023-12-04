@@ -9,11 +9,11 @@
 	<key>INIntentDefinitionNamespace</key>
 	<string>y8ThUJ</string>
 	<key>INIntentDefinitionSystemVersion</key>
-	<string>22E261</string>
+	<string>23A344</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>14E222b</string>
+	<string>15A240d</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>14.3</string>
+	<string>15.0</string>
 	<key>INIntents</key>
 	<array>
 		<dict>
@@ -41,26 +41,18 @@
 					<string>Let's add a quote?</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>E01sDV</string>
-					<key>INIntentParameterCombinationUpdatesLinked</key>
-					<true/>
 				</dict>
 			</dict>
 			<key>INIntentName</key>
 			<string>QuoteIntent</string>
 			<key>INIntentParameterCombinations</key>
 			<dict>
-				<key>quote</key>
+				<key></key>
 				<dict>
-					<key>INIntentParameterCombinationSubtitle</key>
-					<string>Add a quote to your library in Lumy!</string>
-					<key>INIntentParameterCombinationSubtitleID</key>
-					<string>78KOY8</string>
+					<key>INIntentParameterCombinationIsPrimary</key>
+					<true/>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
-					<key>INIntentParameterCombinationTitle</key>
-					<string>Add Quote</string>
-					<key>INIntentParameterCombinationTitleID</key>
-					<string>u3Deha</string>
 				</dict>
 			</dict>
 			<key>INIntentParameters</key>
