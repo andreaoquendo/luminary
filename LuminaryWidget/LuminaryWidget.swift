@@ -48,12 +48,15 @@ struct LuminaryWidgetEntryView : View {
             Spacer()
             Text(QuotesHelper.getRandomQuote()?.quote ?? "Loading...")
                 .multilineTextAlignment(.center)
-                .font(.appBody)
+                .font(.appWidget)
+                .minimumScaleFactor(0.01)
+                
             
             Spacer()
         }
         .edgesIgnoringSafeArea(.all)
-        .padding(.horizontal, 8)
+        .padding(16)
+        .padding(.horizontal, 16)
         .frame(maxWidth: .infinity)
         .background(Color.primaryLuminary)
     }

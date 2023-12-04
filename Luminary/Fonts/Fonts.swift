@@ -8,5 +8,8 @@ extension Font {
     static let dropCapFirstLetter = Font.custom("DMSerifDisplay-Regular", size: 64)
     
     static let dropCapText = Font.custom("Baskervville-Regular", size: 22)
+    
+    // Widget
+    static let appWidget = Font.custom("Baskervville-Regular", size: 20)
 
 }
