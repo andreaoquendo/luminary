@@ -17,6 +17,8 @@ class AppIntentLuminary {
                 print("Siri error.")
             case .authorized:
                 print("Siri ok.")
+            default:
+                print("Status not covered.")
             }
             
         }

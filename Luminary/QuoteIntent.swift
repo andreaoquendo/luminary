@@ -5,8 +5,8 @@ import AppIntents
 struct QuoteIntent: AppIntent, CustomIntentMigratedAppIntent, PredictableIntent {
     static let intentClassName = "QuoteIntent"
 
-    static var title: LocalizedStringResource = "Quote Intent"
-    static var description = IntentDescription("Create a quote")
+    static var title: LocalizedStringResource = "Create a quote"
+    static var description = IntentDescription("Tell Siri what quote would you like to add to your Lumy library.")
 
     @Parameter(title: "Quote", requestValueDialog: "What quote would you like to add?")
     var quote: String
