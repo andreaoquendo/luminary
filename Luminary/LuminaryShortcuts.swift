@@ -9,7 +9,7 @@ struct LuminaryShortcuts: AppShortcutsProvider {
                 "Save a quote on \(.applicationName)",
             ],
             shortTitle: "Save quote",
-            systemImageName: "arrow.up.circle.fill"
+            systemImageName: "square.and.pencil"
         )
     }
 }

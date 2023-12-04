@@ -8,28 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A70065D02AC4757F0010837F /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70065CF2AC4757F0010837F /* CoreData.swift */; };
-		A70065D12AC475810010837F /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70065CF2AC4757F0010837F /* CoreData.swift */; };
-		A70065D32AC475A60010837F /* Luminary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A71C41882AC1CDF600858592 /* Luminary.xcdatamodeld */; };
-		A70065D42AC475AA0010837F /* Luminary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A71C41882AC1CDF600858592 /* Luminary.xcdatamodeld */; };
-		A70065D52AC4B9850010837F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C41862AC1CDF600858592 /* Persistence.swift */; };
 		A70065DE2AC4FE220010837F /* QuotesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70065DD2AC4FE220010837F /* QuotesHelper.swift */; };
-		A70065DF2AC4FE220010837F /* QuotesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70065DD2AC4FE220010837F /* QuotesHelper.swift */; };
 		A70065E12AC59EEA0010837F /* EditQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70065E02AC59EEA0010837F /* EditQuoteView.swift */; };
-		A70065E42AC5AA110010837F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77511C22AC35AAF00547B2E /* Colors.swift */; };
-		A70065E52AC5AA120010837F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77511C22AC35AAF00547B2E /* Colors.swift */; };
-		A703E3BA2AC3D7D000A26B31 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A703E3B92AC3D7D000A26B31 /* Intents.framework */; };
-		A703E3BD2AC3D7D000A26B31 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A703E3BC2AC3D7D000A26B31 /* IntentHandler.swift */; };
-		A703E3C52AC3D7D000A26B31 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A703E3C42AC3D7D000A26B31 /* IntentsUI.framework */; };
-		A703E3C82AC3D7D000A26B31 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A703E3C72AC3D7D000A26B31 /* IntentViewController.swift */; };
-		A703E3CB2AC3D7D000A26B31 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A703E3C92AC3D7D000A26B31 /* MainInterface.storyboard */; };
-		A703E3CF2AC3D7D000A26B31 /* LuminaryIntentsUI.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A703E3C32AC3D7D000A26B31 /* LuminaryIntentsUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		A703E3D22AC3D7D000A26B31 /* LuminaryIntents.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A703E3B72AC3D7D000A26B31 /* LuminaryIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		A703E3DB2AC3D8AA00A26B31 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = A703E3DA2AC3D8AA00A26B31 /* Intents.intentdefinition */; };
-		A703E3DC2AC3D8AA00A26B31 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = A703E3DA2AC3D8AA00A26B31 /* Intents.intentdefinition */; };
-		A703E3DE2AC4518C00A26B31 /* QuoteIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A703E3DD2AC4518C00A26B31 /* QuoteIntentHandler.swift */; };
-		A703E3DF2AC4518C00A26B31 /* QuoteIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A703E3DD2AC4518C00A26B31 /* QuoteIntentHandler.swift */; };
 		A703E3E12AC4536300A26B31 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A703E3E02AC4536300A26B31 /* AppIntent.swift */; };
-		A703E3E22AC4536300A26B31 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A703E3E02AC4536300A26B31 /* AppIntent.swift */; };
 		A71098D22AC7056D00E0E517 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71098D12AC7056D00E0E517 /* WidgetKit.framework */; };
 		A71098D42AC7056D00E0E517 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71098D32AC7056D00E0E517 /* SwiftUI.framework */; };
 		A71098D72AC7056D00E0E517 /* LuminaryWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71098D62AC7056D00E0E517 /* LuminaryWidgetBundle.swift */; };
@@ -59,7 +40,6 @@
 		A77511C52AC3615800547B2E /* DMSerifDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A77511C42AC3615800547B2E /* DMSerifDisplay-Regular.ttf */; };
 		A77511C82AC3633200547B2E /* Baskervville-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A77511C72AC3633200547B2E /* Baskervville-Regular.ttf */; };
 		A78818702AD78B9700CDA7AE /* WidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A788186F2AD78B9700CDA7AE /* WidgetExtension.swift */; };
-		A78818712AD78C6D00CDA7AE /* WidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A788186F2AD78B9700CDA7AE /* WidgetExtension.swift */; };
 		A7F2B3CE2AD7484300A5B835 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2B3CD2AD7484300A5B835 /* Fonts.swift */; };
 		A7F2B3CF2AD7484300A5B835 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2B3CD2AD7484300A5B835 /* Fonts.swift */; };
 		A7F2B3D42AD74FAC00A5B835 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2B3D32AD74FAC00A5B835 /* String.swift */; };
@@ -67,20 +47,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A703E3CD2AC3D7D000A26B31 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A71C41722AC1CDF500858592 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A703E3C22AC3D7D000A26B31;
-			remoteInfo = LuminaryIntentsUI;
-		};
-		A703E3D02AC3D7D000A26B31 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A71C41722AC1CDF500858592 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A703E3B62AC3D7D000A26B31;
-			remoteInfo = LuminaryIntents;
-		};
 		A71098E22AC7056E00E0E517 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A71C41722AC1CDF500858592 /* Project object */;
@@ -97,9 +63,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				A703E3CF2AC3D7D000A26B31 /* LuminaryIntentsUI.appex in Embed Foundation Extensions */,
 				A71098E42AC7056E00E0E517 /* LuminaryWidgetExtension.appex in Embed Foundation Extensions */,
-				A703E3D22AC3D7D000A26B31 /* LuminaryIntents.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,23 +71,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A70065C52AC474260010837F /* LuminaryIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LuminaryIntents.entitlements; sourceTree = "<group>"; };
-		A70065C62AC4742E0010837F /* LuminaryIntentsUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LuminaryIntentsUI.entitlements; sourceTree = "<group>"; };
 		A70065CF2AC4757F0010837F /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		A70065DD2AC4FE220010837F /* QuotesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesHelper.swift; sourceTree = "<group>"; };
 		A70065E02AC59EEA0010837F /* EditQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuoteView.swift; sourceTree = "<group>"; };
 		A703E3B22AC3D70200A26B31 /* Luminary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Luminary.entitlements; sourceTree = "<group>"; };
-		A703E3B72AC3D7D000A26B31 /* LuminaryIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LuminaryIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A703E3B92AC3D7D000A26B31 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
-		A703E3BC2AC3D7D000A26B31 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
-		A703E3BE2AC3D7D000A26B31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A703E3C32AC3D7D000A26B31 /* LuminaryIntentsUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LuminaryIntentsUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A703E3C42AC3D7D000A26B31 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
-		A703E3C72AC3D7D000A26B31 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
-		A703E3CA2AC3D7D000A26B31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		A703E3CC2AC3D7D000A26B31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A703E3DA2AC3D8AA00A26B31 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
-		A703E3DD2AC4518C00A26B31 /* QuoteIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteIntentHandler.swift; sourceTree = "<group>"; };
 		A703E3E02AC4536300A26B31 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		A71098D02AC7056D00E0E517 /* LuminaryWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LuminaryWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A71098D12AC7056D00E0E517 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -156,22 +109,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A703E3B42AC3D7D000A26B31 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A703E3BA2AC3D7D000A26B31 /* Intents.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A703E3C02AC3D7D000A26B31 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A703E3C52AC3D7D000A26B31 /* IntentsUI.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A71098CD2AC7056D00E0E517 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -202,29 +139,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A703E3BB2AC3D7D000A26B31 /* LuminaryIntents */ = {
-			isa = PBXGroup;
-			children = (
-				A70065C52AC474260010837F /* LuminaryIntents.entitlements */,
-				A703E3BC2AC3D7D000A26B31 /* IntentHandler.swift */,
-				A703E3BE2AC3D7D000A26B31 /* Info.plist */,
-				A703E3DA2AC3D8AA00A26B31 /* Intents.intentdefinition */,
-				A703E3DD2AC4518C00A26B31 /* QuoteIntentHandler.swift */,
-			);
-			path = LuminaryIntents;
-			sourceTree = "<group>";
-		};
-		A703E3C62AC3D7D000A26B31 /* LuminaryIntentsUI */ = {
-			isa = PBXGroup;
-			children = (
-				A70065C62AC4742E0010837F /* LuminaryIntentsUI.entitlements */,
-				A703E3C72AC3D7D000A26B31 /* IntentViewController.swift */,
-				A703E3C92AC3D7D000A26B31 /* MainInterface.storyboard */,
-				A703E3CC2AC3D7D000A26B31 /* Info.plist */,
-			);
-			path = LuminaryIntentsUI;
-			sourceTree = "<group>";
-		};
 		A71098D52AC7056D00E0E517 /* LuminaryWidget */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,8 +158,6 @@
 			children = (
 				A71098E82AC7059000E0E517 /* LuminaryWidgetExtension.entitlements */,
 				A71C417C2AC1CDF500858592 /* Luminary */,
-				A703E3BB2AC3D7D000A26B31 /* LuminaryIntents */,
-				A703E3C62AC3D7D000A26B31 /* LuminaryIntentsUI */,
 				A71098D52AC7056D00E0E517 /* LuminaryWidget */,
 				A703E3B82AC3D7D000A26B31 /* Frameworks */,
 				A71C417B2AC1CDF500858592 /* Products */,
@@ -256,8 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				A71C417A2AC1CDF500858592 /* Luminary.app */,
-				A703E3B72AC3D7D000A26B31 /* LuminaryIntents.appex */,
-				A703E3C32AC3D7D000A26B31 /* LuminaryIntentsUI.appex */,
 				A71098D02AC7056D00E0E517 /* LuminaryWidgetExtension.appex */,
 			);
 			name = Products;
@@ -334,40 +244,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A703E3B62AC3D7D000A26B31 /* LuminaryIntents */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A703E3D62AC3D7D000A26B31 /* Build configuration list for PBXNativeTarget "LuminaryIntents" */;
-			buildPhases = (
-				A703E3B32AC3D7D000A26B31 /* Sources */,
-				A703E3B42AC3D7D000A26B31 /* Frameworks */,
-				A703E3B52AC3D7D000A26B31 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LuminaryIntents;
-			productName = LuminaryIntents;
-			productReference = A703E3B72AC3D7D000A26B31 /* LuminaryIntents.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		A703E3C22AC3D7D000A26B31 /* LuminaryIntentsUI */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A703E3D32AC3D7D000A26B31 /* Build configuration list for PBXNativeTarget "LuminaryIntentsUI" */;
-			buildPhases = (
-				A703E3BF2AC3D7D000A26B31 /* Sources */,
-				A703E3C02AC3D7D000A26B31 /* Frameworks */,
-				A703E3C12AC3D7D000A26B31 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LuminaryIntentsUI;
-			productName = LuminaryIntentsUI;
-			productReference = A703E3C32AC3D7D000A26B31 /* LuminaryIntentsUI.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		A71098CF2AC7056D00E0E517 /* LuminaryWidgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A71098E72AC7056E00E0E517 /* Build configuration list for PBXNativeTarget "LuminaryWidgetExtension" */;
@@ -397,8 +273,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				A703E3CE2AC3D7D000A26B31 /* PBXTargetDependency */,
-				A703E3D12AC3D7D000A26B31 /* PBXTargetDependency */,
 				A71098E32AC7056E00E0E517 /* PBXTargetDependency */,
 			);
 			name = Luminary;
@@ -416,12 +290,6 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					A703E3B62AC3D7D000A26B31 = {
-						CreatedOnToolsVersion = 14.3;
-					};
-					A703E3C22AC3D7D000A26B31 = {
-						CreatedOnToolsVersion = 14.3;
-					};
 					A71098CF2AC7056D00E0E517 = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -444,29 +312,12 @@
 			projectRoot = "";
 			targets = (
 				A71C41792AC1CDF500858592 /* Luminary */,
-				A703E3B62AC3D7D000A26B31 /* LuminaryIntents */,
-				A703E3C22AC3D7D000A26B31 /* LuminaryIntentsUI */,
 				A71098CF2AC7056D00E0E517 /* LuminaryWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A703E3B52AC3D7D000A26B31 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A703E3C12AC3D7D000A26B31 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A703E3CB2AC3D7D000A26B31 /* MainInterface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A71098CE2AC7056D00E0E517 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -492,33 +343,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A703E3B32AC3D7D000A26B31 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A70065E42AC5AA110010837F /* Colors.swift in Sources */,
-				A70065D52AC4B9850010837F /* Persistence.swift in Sources */,
-				A703E3DC2AC3D8AA00A26B31 /* Intents.intentdefinition in Sources */,
-				A703E3E22AC4536300A26B31 /* AppIntent.swift in Sources */,
-				A70065D12AC475810010837F /* CoreData.swift in Sources */,
-				A703E3DF2AC4518C00A26B31 /* QuoteIntentHandler.swift in Sources */,
-				A70065D32AC475A60010837F /* Luminary.xcdatamodeld in Sources */,
-				A70065DF2AC4FE220010837F /* QuotesHelper.swift in Sources */,
-				A703E3BD2AC3D7D000A26B31 /* IntentHandler.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A703E3BF2AC3D7D000A26B31 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A70065E52AC5AA120010837F /* Colors.swift in Sources */,
-				A78818712AD78C6D00CDA7AE /* WidgetExtension.swift in Sources */,
-				A70065D42AC475AA0010837F /* Luminary.xcdatamodeld in Sources */,
-				A703E3C82AC3D7D000A26B31 /* IntentViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A71098CC2AC7056D00E0E517 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -542,9 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7F2B3CE2AD7484300A5B835 /* Fonts.swift in Sources */,
-				A703E3DB2AC3D8AA00A26B31 /* Intents.intentdefinition in Sources */,
 				A71098F02AC70B9E00E0E517 /* LuminaryShortcuts.swift in Sources */,
-				A703E3DE2AC4518C00A26B31 /* QuoteIntentHandler.swift in Sources */,
 				A703E3E12AC4536300A26B31 /* AppIntent.swift in Sources */,
 				A70065DE2AC4FE220010837F /* QuotesHelper.swift in Sources */,
 				A71098EE2AC70AAF00E0E517 /* QuoteIntent.swift in Sources */,
@@ -564,16 +386,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A703E3CE2AC3D7D000A26B31 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A703E3C22AC3D7D000A26B31 /* LuminaryIntentsUI */;
-			targetProxy = A703E3CD2AC3D7D000A26B31 /* PBXContainerItemProxy */;
-		};
-		A703E3D12AC3D7D000A26B31 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A703E3B62AC3D7D000A26B31 /* LuminaryIntents */;
-			targetProxy = A703E3D02AC3D7D000A26B31 /* PBXContainerItemProxy */;
-		};
 		A71098E32AC7056E00E0E517 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A71098CF2AC7056D00E0E517 /* LuminaryWidgetExtension */;
@@ -581,134 +393,7 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		A703E3C92AC3D7D000A26B31 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A703E3CA2AC3D7D000A26B31 /* Base */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		A703E3D42AC3D7D000A26B31 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = LuminaryIntentsUI/LuminaryIntentsUI.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U6ZXY7569L;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LuminaryIntentsUI/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = LuminaryIntentsUI;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.andreaoquendo.TheLuminary.LuminaryIntentsUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		A703E3D52AC3D7D000A26B31 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = LuminaryIntentsUI/LuminaryIntentsUI.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U6ZXY7569L;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LuminaryIntentsUI/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = LuminaryIntentsUI;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.andreaoquendo.TheLuminary.LuminaryIntentsUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		A703E3D72AC3D7D000A26B31 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = LuminaryIntents/LuminaryIntents.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U6ZXY7569L;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LuminaryIntents/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = LuminaryIntents;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.andreaoquendo.TheLuminary.LuminaryIntents;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		A703E3D82AC3D7D000A26B31 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = LuminaryIntents/LuminaryIntents.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U6ZXY7569L;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LuminaryIntents/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = LuminaryIntents;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.andreaoquendo.TheLuminary.LuminaryIntents;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		A71098E52AC7056E00E0E517 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -716,7 +401,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = LuminaryWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEVELOPMENT_TEAM = U6ZXY7569L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LuminaryWidget/Info.plist;
@@ -727,7 +412,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andreaoquendo.TheLuminary.LuminaryWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -747,7 +432,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = LuminaryWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEVELOPMENT_TEAM = U6ZXY7569L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LuminaryWidget/Info.plist;
@@ -758,7 +443,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andreaoquendo.TheLuminary.LuminaryWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -893,7 +578,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Luminary/Luminary.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEVELOPMENT_ASSET_PATHS = "\"Luminary/Preview Content\"";
 				DEVELOPMENT_TEAM = U6ZXY7569L;
 				ENABLE_PREVIEWS = YES;
@@ -912,7 +597,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andreaoquendo.TheLuminary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -932,7 +617,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Luminary/Luminary.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEVELOPMENT_ASSET_PATHS = "\"Luminary/Preview Content\"";
 				DEVELOPMENT_TEAM = U6ZXY7569L;
 				ENABLE_PREVIEWS = YES;
@@ -951,7 +636,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andreaoquendo.TheLuminary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -966,24 +651,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A703E3D32AC3D7D000A26B31 /* Build configuration list for PBXNativeTarget "LuminaryIntentsUI" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A703E3D42AC3D7D000A26B31 /* Debug */,
-				A703E3D52AC3D7D000A26B31 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A703E3D62AC3D7D000A26B31 /* Build configuration list for PBXNativeTarget "LuminaryIntents" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A703E3D72AC3D7D000A26B31 /* Debug */,
-				A703E3D82AC3D7D000A26B31 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		A71098E72AC7056E00E0E517 /* Build configuration list for PBXNativeTarget "LuminaryWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

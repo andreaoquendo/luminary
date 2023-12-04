@@ -24,22 +24,22 @@ class AppIntentLuminary {
         }
     }
     
-    class func quoteSiri() {
-        let intent = QuoteIntentIntent()
-        intent.suggestedInvocationPhrase = "Save my today's quote"
-        intent.quote = "ehisso?"
-        
-        
-        let interaction = INInteraction(intent: intent, response: nil)
-        
-        interaction.donate{ error in
-            if let error = error as NSError? {
-                print("Interaction donation failed: \(error.description)")
-                
-            } else {
-                print("Success")
-            }
-        }
-    }
+//    class func quoteSiri() {
+//        let intent = QuoteIntentIntent()
+//        intent.suggestedInvocationPhrase = "Save my today's quote"
+//        intent.quote = "ehisso?"
+//        
+//        
+//        let interaction = INInteraction(intent: intent, response: nil)
+//        
+//        interaction.donate{ error in
+//            if let error = error as NSError? {
+//                print("Interaction donation failed: \(error.description)")
+//                
+//            } else {
+//                print("Success")
+//            }
+//        }
+//    }
     
 }
