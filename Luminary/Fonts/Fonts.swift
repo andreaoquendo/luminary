@@ -10,6 +10,6 @@ extension Font {
     static let dropCapText = Font.custom("Baskervville-Regular", size: 22)
     
     // Widget
-    static let appWidget = Font.custom("Baskervville-Regular", size: 20)
+    static let appWidget = Font.custom("Baskervville-Regular", size: 18)
 
 }

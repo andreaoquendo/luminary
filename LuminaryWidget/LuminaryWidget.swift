@@ -47,16 +47,17 @@ struct LuminaryWidgetEntryView : View {
         VStack(alignment: .center){
             Spacer()
             Text(QuotesHelper.getRandomQuote()?.quote ?? "Loading...")
+//            Text("As pessoas acreditam no que querem acreditar e depois procuram razões para reforçar suas crenças.")
                 .multilineTextAlignment(.center)
                 .font(.appWidget)
                 .minimumScaleFactor(0.01)
+                
                 
             
             Spacer()
         }
         .edgesIgnoringSafeArea(.all)
-        .padding(16)
-        .padding(.horizontal, 16)
+        .padding(24)
         .frame(maxWidth: .infinity)
         .background(Color.primaryLuminary)
     }
